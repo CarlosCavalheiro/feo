@@ -1,0 +1,4 @@
+C:\Users\sn1037463\Desktop\AFE\afe_api\WebFEO_API\WebFEO_API\obj\Debug\netcoreapp2.2\WebFEO_API.csprojAssemblyReference.cache
+C:\Users\sn1037463\Desktop\AFE\afe_api\WebFEO_API\WebFEO_API\obj\Debug\netcoreapp2.2\WebFEO_API.AssemblyInfoInputs.cache
+C:\Users\sn1037463\Desktop\AFE\afe_api\WebFEO_API\WebFEO_API\obj\Debug\netcoreapp2.2\WebFEO_API.AssemblyInfo.cs
+C:\Users\sn1037463\Desktop\AFE\afe_api\WebFEO_API\WebFEO_API\obj\Debug\netcoreapp2.2\WebFEO_API.csproj.CoreCompileInputs.cache

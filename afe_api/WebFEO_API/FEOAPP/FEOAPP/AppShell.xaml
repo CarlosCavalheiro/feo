@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms" 
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:local="clr-namespace:FEOAPP.Views"
+       xmlns:local1="clr-namespace:FEOAPP.Views.Aluno"
+       xmlns:local2="clr-namespace:FEOAPP.Views.Responsavel"
+       xmlns:local3="clr-namespace:FEOAPP.Views.Docente"       
+       xmlns:local4="clr-namespace:FEOAPP.Views.Apontamento"       
+       Title="FEOAPP"
+       x:Class="FEOAPP.AppShell">
+
+    <!--
+        The overall app visual hierarchy is defined here, along with navigation.
+    
+        https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell/
+    -->
+
+    <Shell.Resources>
+        <ResourceDictionary>
+            <Style x:Key="BaseStyle" TargetType="Element">
+                <Setter Property="Shell.BackgroundColor" Value="{StaticResource Primary}" />
+                <Setter Property="Shell.ForegroundColor" Value="White" />
+                <Setter Property="Shell.TitleColor" Value="White" />
+                <Setter Property="Shell.DisabledColor" Value="#B4FFFFFF" />
+                <Setter Property="Shell.UnselectedColor" Value="#95FFFFFF" />
+                <Setter Property="Shell.TabBarBackgroundColor" Value="{StaticResource Primary}" />
+                <Setter Property="Shell.TabBarForegroundColor" Value="White"/>
+                <Setter Property="Shell.TabBarUnselectedColor" Value="#95FFFFFF"/>
+                <Setter Property="Shell.TabBarTitleColor" Value="White"/>
+            </Style>
+            <Style TargetType="TabBar" BasedOn="{StaticResource BaseStyle}" />
+            <Style TargetType="FlyoutItem" BasedOn="{StaticResource BaseStyle}" />
+            <Style x:Key="Alunos" TargetType="Element" BasedOn="{StaticResource BaseStyle}">
+                <Setter Property="Shell.BackgroundColor" Value="Red" />
+                <Setter Property="Shell.TabBarBackgroundColor" Value="Red" />
+            </Style>
+            
+            <!--
+            Default Styles for all Flyout Items
+            https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell/flyout#flyoutitem-and-menuitem-style-classes
+            -->
+            <Style Class="FlyoutItemLabelStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="White"></Setter>
+            </Style>
+            <Style Class="FlyoutItemLayoutStyle" TargetType="Layout" ApplyToDerivedTypes="True">
+                <Setter Property="BackgroundColor" Value="LightBlue"></Setter>
+                <Setter Property="VisualStateManager.VisualStateGroups">
+                    <VisualStateGroupList>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor" Value="White" />
+                                    <Setter TargetName="FlyoutItemLabel" Property="Label.TextColor" Value="{StaticResource Primary}" />
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState x:Name="Selected">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor" Value="{StaticResource Primary}" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </Setter>
+            </Style>
+
+            <!--
+            Custom Style you can apply to any Flyout Item
+            -->
+            <Style Class="MenuItemLayoutStyle" TargetType="Layout" ApplyToDerivedTypes="True">
+                <Setter Property="VisualStateManager.VisualStateGroups">
+                    <VisualStateGroupList>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter TargetName="FlyoutItemLabel" Property="Label.TextColor" Value="{StaticResource Primary}" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
+    </Shell.Resources>
+
+    <Shell.FlyoutHeaderTemplate>
+        <DataTemplate>
+            <Grid BackgroundColor="White">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="80"/>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="10"/>
+                </Grid.RowDefinitions>
+
+                <StackLayout Grid.Row="0" BackgroundColor="White" VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
+                    <StackLayout Orientation="Horizontal">
+                        <ContentView Padding="20,10,0,10" VerticalOptions="FillAndExpand">
+                            <Image Source="logo_fec.png" VerticalOptions="Center" HeightRequest="70" />
+                        </ContentView>
+                    </StackLayout>
+                </StackLayout>
+
+                <Label Grid.Row="1" Margin="20, 0, 0, 0" FontSize="Medium" TextColor="#393738">Fulano de Tal</Label>
+                <Label Grid.Row="2" Margin="20, 0, 0, 0" FontSize="Small" TextColor="#393738">Docente Olimpiada</Label>
+                
+            </Grid>
+        </DataTemplate>
+    </Shell.FlyoutHeaderTemplate>
+
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
+        <ShellContent Title="Início" >
+            <ShellContent.Icon>
+                <FontImageSource
+                    FontFamily="{StaticResource FonteIcon}"
+                    Glyph="&#xe828;"
+                    Color="#393738"
+                    Size="24">
+                </FontImageSource>
+            </ShellContent.Icon>
+            <local:Principal/>
+        </ShellContent>
+        <Tab Title="Allunos" Style="{StaticResource Alunos}">
+            <Tab.Icon>
+                
+                    <FontImageSource
+                    FontFamily="{StaticResource FonteIcon}"
+                    Glyph="&#xe841;"
+                    Color="#393738"
+                    Size="24">
+                    </FontImageSource>
+                
+            </Tab.Icon>
+            <ShellContent Title="Alunos">
+                
+                <local1:ListarAluno/>
+            </ShellContent>
+        </Tab>
+        <ShellContent Title="Responsáveis">
+            <ShellContent.Icon>
+                <FontImageSource
+                    FontFamily="{StaticResource FonteIcon}"
+                    Glyph="&#xe818;"
+                    Color="#393738"
+                    Size="24">
+                </FontImageSource>
+            </ShellContent.Icon>
+            <local2:ListarResponsavel/>
+        </ShellContent>
+        <ShellContent Title="Docentes">
+            <ShellContent.Icon>
+                <FontImageSource
+                    FontFamily="{StaticResource FonteIcon}"
+                    Glyph="&#xf2bb;"
+                    Color="#393738"
+                    Size="24">
+                </FontImageSource>
+            </ShellContent.Icon>
+            <local3:ListarDocente/>
+        </ShellContent>
+        <ShellContent Title="Apontamentos" ContentTemplate="{DataTemplate local4:ListarApontamento}">
+            <ShellContent.Icon>
+                <FontImageSource
+                    FontFamily="{StaticResource FonteIcon}"
+                    Glyph="&#xe837;"
+                    Color="#393738"
+                    Size="24">
+                </FontImageSource>
+            </ShellContent.Icon>
+            <local4:ListarApontamento/>
+        </ShellContent>
+    </FlyoutItem>
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
+        <ShellContent Title="Sobre" Route="AboutPage" >
+            <ShellContent.Icon>
+                <FontImageSource
+                    FontFamily="{StaticResource FonteIcon}"
+                    Glyph="&#xe826;"
+                    Color="#393738"
+                    Size="24">
+                </FontImageSource>
+            </ShellContent.Icon>
+            <local:AboutPage/>
+        </ShellContent>
+    </FlyoutItem>
+
+    <MenuItem Text="Sair" StyleClass="MenuItemLayoutStyle" Clicked="OnSairClicked">
+        <MenuItem.IconImageSource>
+            <FontImageSource
+                    FontFamily="{StaticResource FonteIcon}"
+                    Glyph="&#xe800;"
+                    Color="#393738"
+                    Size="24">
+            </FontImageSource>
+        </MenuItem.IconImageSource>
+    </MenuItem>
+
+    <!--<ShellContent Route="LoginPage" Shell.FlyoutBehavior="Disabled" ContentTemplate="{DataTemplate local:LoginPage}" />-->
+
+</Shell>
