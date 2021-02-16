@@ -634,11 +634,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sn1037463\\Desktop\\AFE\\afe_api\\WebFEO_API\\FEOAPP\\FEOAPP\\FEOAPP.csproj",
+      "projectUniqueName": "A:\\feo\\afe_api\\WebFEO_API\\FEOAPP\\FEOAPP\\FEOAPP.csproj",
       "projectName": "FEOAPP",
-      "projectPath": "C:\\Users\\sn1037463\\Desktop\\AFE\\afe_api\\WebFEO_API\\FEOAPP\\FEOAPP\\FEOAPP.csproj",
+      "projectPath": "A:\\feo\\afe_api\\WebFEO_API\\FEOAPP\\FEOAPP\\FEOAPP.csproj",
       "packagesPath": "C:\\Users\\sn1037463\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sn1037463\\Desktop\\AFE\\afe_api\\WebFEO_API\\FEOAPP\\FEOAPP\\obj\\",
+      "outputPath": "A:\\feo\\afe_api\\WebFEO_API\\FEOAPP\\FEOAPP\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"

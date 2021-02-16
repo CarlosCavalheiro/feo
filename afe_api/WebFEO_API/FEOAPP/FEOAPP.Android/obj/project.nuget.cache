@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jX9zcOpPwweDpK3FUW/X2CzS9YbxsL3dbe7Qp0BMxYeVROqhsBuWY68jVAw8zv9xWBGCUlZ5P1ZL8U47ZcacLw==",
+  "dgSpecHash": "g8Q1jjIWyGkOrQPCASRzzR/XT1Nc0ap1UyvT4cAVGwCXITii7FMyzURm3H8Fw2BfIVtUxep5akHHyiXA4C+yZQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\sn1037463\\Desktop\\AFE\\afe_api\\WebFEO_API\\FEOAPP\\FEOAPP.Android\\FEOAPP.Android.csproj",
+  "projectFilePath": "A:\\feo\\afe_api\\WebFEO_API\\FEOAPP\\FEOAPP.Android\\FEOAPP.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.arch.core.common\\1.1.1.3\\xamarin.android.arch.core.common.1.1.1.3.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.arch.core.runtime\\1.1.1.3\\xamarin.android.arch.core.runtime.1.1.1.3.nupkg.sha512",

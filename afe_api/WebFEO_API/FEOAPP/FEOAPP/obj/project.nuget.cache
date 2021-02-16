@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "iPL7PPj84sBQjNQ2V7sZ2P5yhKhfdod+xFwglXgcYQXVmnTZCjYp2ZkHxDlZhUrxVo0oUpPLRIaPWPuf9aZZTQ==",
+  "dgSpecHash": "UbJPUrbW5XvzJMLpUIXjMTgkg1BqRBDi94O1DiU+Q7fr1hUhPWkUdDJlNc0o8nOdIiLBkiRsZqTZjeYmOoP/Ww==",
   "success": true,
-  "projectFilePath": "C:\\Users\\sn1037463\\Desktop\\AFE\\afe_api\\WebFEO_API\\FEOAPP\\FEOAPP\\FEOAPP.csproj",
+  "projectFilePath": "A:\\feo\\afe_api\\WebFEO_API\\FEOAPP\\FEOAPP\\FEOAPP.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sn1037463\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\sn1037463\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",

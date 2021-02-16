@@ -984,11 +984,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sn1037463\\Desktop\\AFE\\afe_api\\WebFEO_API\\FEOAPP\\FEOAPP.iOS\\FEOAPP.iOS.csproj",
+      "projectUniqueName": "A:\\feo\\afe_api\\WebFEO_API\\FEOAPP\\FEOAPP.iOS\\FEOAPP.iOS.csproj",
       "projectName": "FEOAPP.iOS",
-      "projectPath": "C:\\Users\\sn1037463\\Desktop\\AFE\\afe_api\\WebFEO_API\\FEOAPP\\FEOAPP.iOS\\FEOAPP.iOS.csproj",
+      "projectPath": "A:\\feo\\afe_api\\WebFEO_API\\FEOAPP\\FEOAPP.iOS\\FEOAPP.iOS.csproj",
       "packagesPath": "C:\\Users\\sn1037463\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sn1037463\\Desktop\\AFE\\afe_api\\WebFEO_API\\FEOAPP\\FEOAPP.iOS\\obj\\",
+      "outputPath": "A:\\feo\\afe_api\\WebFEO_API\\FEOAPP\\FEOAPP.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -1009,8 +1009,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Users\\sn1037463\\Desktop\\AFE\\afe_api\\WebFEO_API\\FEOAPP\\FEOAPP\\FEOAPP.csproj": {
-              "projectPath": "C:\\Users\\sn1037463\\Desktop\\AFE\\afe_api\\WebFEO_API\\FEOAPP\\FEOAPP\\FEOAPP.csproj"
+            "A:\\feo\\afe_api\\WebFEO_API\\FEOAPP\\FEOAPP\\FEOAPP.csproj": {
+              "projectPath": "A:\\feo\\afe_api\\WebFEO_API\\FEOAPP\\FEOAPP\\FEOAPP.csproj"
             }
           }
         }
