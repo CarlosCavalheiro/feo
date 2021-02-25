@@ -15,7 +15,17 @@ namespace FEOAPP
             InitializeComponent();
 
             DependencyService.Register<MockDataStore>();
-            MainPage = new AppShell();
+            //MainPage = new AppShell();
+            
+            var isLoogged = Xamarin.Essentials.SecureStorage.GetAsync("isLogged").Result;
+            if (isLoogged == "1")
+            {
+                MainPage = new AppShell();
+            }
+            else
+            {
+                MainPage = new LoginPage();
+            }
 
             //Altera entre o modo escuro/claro do app com base nas configurações do sistema
             VerificaThema(Application.Current.RequestedTheme);

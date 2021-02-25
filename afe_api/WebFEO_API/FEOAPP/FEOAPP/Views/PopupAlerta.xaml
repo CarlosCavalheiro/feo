@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<rg:PopupPage  xmlns:rg="http://rotorgames.com"
+               xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FEOAPP.Views.PopupAlerta">
+    <rg:PopupPage.Animation>
+        <rg:ScaleAnimation 
+      PositionIn="Center"
+      PositionOut="Center"
+      ScaleIn="1.2"
+      ScaleOut="0.8"
+      DurationIn="400"
+      DurationOut="300"
+      EasingIn="SinOut"
+      EasingOut="SinIn"
+      HasBackgroundAnimation="True"/>
+    </rg:PopupPage.Animation>
+    <Frame VerticalOptions="Center" 
+           HorizontalOptions="Center"
+           BackgroundColor="{DynamicResource BackgroundColor}"
+           Margin="20">
+        <StackLayout>
+            <Label x:Name="lblMensagemAguarde"/>
+            <Button x:Name="BtnFechar" Style="{DynamicResource BtnNormal2}" Text="Fechar" Clicked="OnClose"></Button>
+        </StackLayout>
+    </Frame>
+</rg:PopupPage>

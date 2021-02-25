@@ -43,8 +43,11 @@ A:\feo\afe_api\WebFEO_API\FEOAPP\FEOAPP\obj\Debug\netstandard2.0\Views\Principal
 A:\feo\afe_api\WebFEO_API\FEOAPP\FEOAPP\obj\Debug\netstandard2.0\Views\Responsavel\ListarResponsavel.xaml.g.cs
 A:\feo\afe_api\WebFEO_API\FEOAPP\FEOAPP\obj\Debug\netstandard2.0\FEOAPP.AssemblyInfoInputs.cache
 A:\feo\afe_api\WebFEO_API\FEOAPP\FEOAPP\obj\Debug\netstandard2.0\FEOAPP.AssemblyInfo.cs
-A:\feo\afe_api\WebFEO_API\FEOAPP\FEOAPP\obj\Debug\netstandard2.0\FEOAPP.csproj.CoreCompileInputs.cache
-A:\feo\afe_api\WebFEO_API\FEOAPP\FEOAPP\obj\Debug\netstandard2.0\XamlC.stamp
 A:\feo\afe_api\WebFEO_API\FEOAPP\FEOAPP\obj\Debug\netstandard2.0\FEOAPP.dll
 A:\feo\afe_api\WebFEO_API\FEOAPP\FEOAPP\obj\Debug\netstandard2.0\ref\FEOAPP.dll
 A:\feo\afe_api\WebFEO_API\FEOAPP\FEOAPP\obj\Debug\netstandard2.0\FEOAPP.pdb
+A:\feo\afe_api\WebFEO_API\FEOAPP\FEOAPP\obj\Debug\netstandard2.0\Views\PopupAguarde.xaml.g.cs
+A:\feo\afe_api\WebFEO_API\FEOAPP\FEOAPP\obj\Debug\netstandard2.0\Views\PopupAlerta.xaml.g.cs
+A:\feo\afe_api\WebFEO_API\FEOAPP\FEOAPP\obj\Debug\netstandard2.0\FEOAPP.csproj.CoreCompileInputs.cache
+A:\feo\afe_api\WebFEO_API\FEOAPP\FEOAPP\obj\Debug\netstandard2.0\FEOAPP.csproj.Fody.CopyLocal.cache
+A:\feo\afe_api\WebFEO_API\FEOAPP\FEOAPP\obj\Debug\netstandard2.0\XamlC.stamp

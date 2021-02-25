@@ -7,8 +7,60 @@
              x:Class="FEOAPP.Views.LoginPage"
              Shell.NavBarIsVisible="False">
     <ContentPage.Content>
-        <StackLayout Padding="10,0,10,0" VerticalOptions="Center">
-            <Button VerticalOptions="Center" Text="Login" Command="{Binding LoginCommand}"/>
+        <StackLayout>
+            <Frame
+                VerticalOptions="CenterAndExpand"
+                Margin="5"
+                HasShadow="false" BackgroundColor="Transparent">
+                <StackLayout>
+                    <Image Source="{AppThemeBinding 
+                        Light=logo_fec.png, 
+                        Dark=logo_fec.png, 
+                        Default=logo_fec.png}" 
+                           WidthRequest="280"/>
+                    <Label Text="LOCAÇÃO DE BOMBAS DE CONCRETO"                            
+                           Style="{DynamicResource TxtNormal}"
+                           FontSize="14"
+                           HorizontalTextAlignment="Center"
+                           TextColor="{DynamicResource TextPrimaryColor}"
+                           Margin="0, 10, 0, 30"/>
+
+                    <Entry Style="{DynamicResource Rubik}" 
+                               BackgroundColor="Transparent" 
+                               Text="{Binding Login}"
+                               TextColor="{DynamicResource TextPrimaryColor}"/>
+
+                    <Entry IsPassword="True"
+                            FontFamily="{DynamicResource Rubik}" 
+                               BackgroundColor="Transparent" 
+                               Text="{Binding Senha}"
+                               TextColor="{DynamicResource TextPrimaryColor}"/>
+
+                    <StackLayout Margin="0, 10, 0, 0">
+                        <Button Text="Esqueci minha senha"
+                            Style="{DynamicResource BtnRememberPassword}"/>
+                    </StackLayout>
+
+                    <StackLayout Margin="0, 20, 0, 0">
+                        <Button Text="Acessar"
+                            Style="{DynamicResource BtnAccess}"
+                                Command="{Binding LoginCommand}"
+                            />
+                    </StackLayout>
+
+                    <Button Text="Sou novo por aqui!"
+                            Style="{DynamicResource BtnNewAccess}"                            
+                            x:Name="BtnNovoCadastro"                            
+                            Command="{Binding LoginCommand}"
+                            />
+
+                </StackLayout>
+            </Frame>
+            <Label Style="{DynamicResource TxtVersion}" TextColor="{DynamicResource TextPrimaryColor}" Margin="10">
+                Versão 1.0.0
+            </Label>
+            <!--<StackLayout Padding="10,0,10,0" VerticalOptions="Center">-->
+            <!--<Button VerticalOptions="Center" Text="Login" Command="{Binding LoginCommand}"/>-->
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
