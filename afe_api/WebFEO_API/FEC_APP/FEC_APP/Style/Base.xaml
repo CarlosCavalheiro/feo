@@ -1,0 +1,145 @@
+﻿<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    x:Class="FEC_APP.Style.Base"                    
+                    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                    mc:Ignorable="d"
+                    >
+    <!--FontIcon-->   
+    <OnPlatform x:Key="FonteIcon" x:TypeArguments="x:String">
+        <On Platform="Android" Value="fontello.ttf#Regular" />
+        <On Platform="iOS" Value="fontello" />
+    </OnPlatform>
+    <!--Font-->
+    <OnPlatform x:Key="Rubik"
+                x:TypeArguments="x:String">
+        <On Platform="Android">Fonts/Rubik-Regular.ttf#Rubik-Regular</On>
+        <On Platform="iOS">Rubik-Regular</On>
+    </OnPlatform>
+    <OnPlatform x:Key="RubikItalic"
+                x:TypeArguments="x:String">
+        <On Platform="Android">Fonts/Rubik-Italic.ttf#Rubik-Italic-</On>
+        <On Platform="iOS">Rubik-Regular</On>
+    </OnPlatform>
+    <OnPlatform x:Key="RubikMedium"
+                x:TypeArguments="x:String">
+        <On Platform="Android">Fonts/Rubik-Medium.ttf#Rubik-Medium</On>
+        <On Platform="iOS">Rubik-Medium</On>
+    </OnPlatform>
+    <OnPlatform x:Key="RubikBold"
+                x:TypeArguments="x:String">
+        <On Platform="Android">Fonts/Rubik-Bold.ttf#Rubik-Bold</On>
+        <On Platform="iOS">Rubik-Bold</On>
+    </OnPlatform>
+    <Style TargetType="NavigationPage">
+        <Setter Property="BarBackgroundColor" Value="{DynamicResource NavigationPrimary}" />
+        <Setter Property="BarTextColor" Value="White" />
+        <Setter Property="BackgroundColor" Value="{DynamicResource BackgroundColor}" />
+    </Style>
+    <Style x:Key="TxtNormal" TargetType="Label">
+        <Setter Property="FontFamily" Value="{StaticResource Rubik}" />
+        <Setter Property="HorizontalTextAlignment" Value="Center" />
+        <Setter Property="TextColor" Value="{DynamicResource TextPrimaryColor}" />
+    </Style>
+    <Style x:Key="TxtBold" TargetType="Label">
+        <Setter Property="FontFamily" Value="{StaticResource RubikBold}" />
+        <Setter Property="HorizontalTextAlignment" Value="Center" />
+        <Setter Property="TextColor" Value="{DynamicResource TextPrimaryColor}" />
+    </Style>
+    <Style x:Key="TxtVersion" TargetType="Label">
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="FontFamily" Value="{StaticResource Rubik}" />
+        <Setter Property="HorizontalTextAlignment" Value="Center" />
+    </Style>
+    <Style x:Key="EditarTexto" TargetType="Entry">
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="FontFamily" Value="{StaticResource Rubik}" />
+        <Setter Property="HorizontalTextAlignment" Value="Center" />
+        <Setter Property="Placeholder" Value="Digite o texto" />
+        <Setter Property="Margin" Value="35, 0, 35, 0" />
+    </Style>
+    <Style x:Key="BtnNormal" TargetType="Button">
+        <Setter Property="Visual" Value="Material"/>
+        <Setter Property="FontSize" Value="18" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="CornerRadius" Value="30" />
+        <Setter Property="FontFamily" Value="{StaticResource Rubik}" />
+        <Setter Property="TextColor" Value="{DynamicResource BtnTextColor}" />
+        <Setter Property="BackgroundColor" Value="{DynamicResource BtnBackgroundColor}" />
+        <Setter Property="Margin" Value="10, 0, 10, 0" />
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="HeightRequest" Value="60" />
+    </Style>
+    <Style x:Key="BtnDestaqueOferta" TargetType="Button">
+        <Setter Property="Visual" Value="Material"/>
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="FontFamily" Value="{StaticResource Rubik}" />
+        <Setter Property="TextColor" Value="{DynamicResource BtnTextColor}" />
+        <Setter Property="BackgroundColor" Value="{DynamicResource BtnBackgroundColor}" />
+        <Setter Property="Margin" Value="0" />
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="HeightRequest" Value="30" />
+    </Style>
+    <Style x:Key="BtnDetalhePedido" TargetType="Button">
+        <Setter Property="Visual" Value="Material"/>
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="FontFamily" Value="{StaticResource Rubik}" />
+        <Setter Property="TextColor" Value="{DynamicResource BtnTextColor}" />
+        <Setter Property="BackgroundColor" Value="{DynamicResource Btn4BackgroundColor}" />
+        <Setter Property="Margin" Value="0" />
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="HeightRequest" Value="30" />
+    </Style>
+    <Style x:Key="BtnAccess" TargetType="Button">
+        <Setter Property="Visual" Value="Material"/>
+        <Setter Property="FontSize" Value="18" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="CornerRadius" Value="30" />
+        <Setter Property="FontFamily" Value="{StaticResource Rubik}" />
+        <Setter Property="TextColor" Value="{DynamicResource BtnTextColor}" />
+        <Setter Property="BackgroundColor" Value="{DynamicResource BtnBackgroundColor}" />
+        <Setter Property="Margin" Value="40, 5, 40, 5" />
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="HeightRequest" Value="50" />
+    </Style>
+    <Style x:Key="BtnNormal2" TargetType="Button">
+        <Setter Property="Visual" Value="Material"/>
+        <Setter Property="FontSize" Value="18" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="CornerRadius" Value="30" />
+        <Setter Property="FontFamily" Value="{StaticResource Rubik}" />
+        <Setter Property="TextColor" Value="{DynamicResource TextPrimaryColor}" />
+        <Setter Property="BackgroundColor" Value="{DynamicResource Btn3BackgroundColor}" />
+        <Setter Property="Margin" Value="40, 5, 40, 5" />
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="HeightRequest" Value="50" />
+    </Style>
+    <Style x:Key="BtnRememberPassword" TargetType="Button">
+        <Setter Property="Visual" Value="Material"/>
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="CornerRadius" Value="30" />
+        <Setter Property="FontFamily" Value="{StaticResource Rubik}" />
+        <Setter Property="TextColor" Value="{DynamicResource TextPrimaryColor}" />
+        <Setter Property="BackgroundColor" Value="Transparent" />
+        <Setter Property="Margin" Value="20, 0, 20, 0" />
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="HeightRequest" Value="20" />
+    </Style>
+    <Style x:Key="BtnNewAccess" TargetType="Button">
+        <Setter Property="Visual" Value="Material"/>
+        <Setter Property="FontSize" Value="18" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="CornerRadius" Value="30" />
+        <Setter Property="FontFamily" Value="{StaticResource Rubik}" />
+        <Setter Property="TextColor" Value="{DynamicResource BtnTextColor}" />
+        <Setter Property="BackgroundColor" Value="{DynamicResource Btn2BackgroundColor}" />
+        <Setter Property="Margin" Value="40, 5, 40, 5" />
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="HeightRequest" Value="50" />
+    </Style>
+
+
+</ResourceDictionary>

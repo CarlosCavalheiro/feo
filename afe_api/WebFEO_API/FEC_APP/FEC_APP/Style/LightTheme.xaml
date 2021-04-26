@@ -1,0 +1,29 @@
+﻿<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    x:Class="FEC_APP.Style.LightTheme"                    
+                    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"                    
+                    mc:Ignorable="d"
+                    Source="Base.xaml"
+                    >
+
+    <Color x:Key="NavigationPrimary">#393738</Color>
+    <Color x:Key="Primary">#2196F3</Color>
+    <Color x:Key="colorPrimary">#FFFFFF</Color>
+    <Color x:Key="BackgroundColor">#FFFFFF</Color>
+    <Color x:Key="BackgroundColorApp">#F0F0F0</Color>
+    <Color x:Key="TextPrimaryColor">#393738</Color>
+    <Color x:Key="TextSecondaryColor">#FF444444</Color>
+    <Color x:Key="TextTernaryColor">#393738</Color>
+    <Color x:Key="BtnBackgroundColor">#4285F4</Color>
+    <Color x:Key="Btn2BackgroundColor">#FBBC05</Color>
+    <Color x:Key="Btn3BackgroundColor">#EA4335</Color>
+    <Color x:Key="Btn4BackgroundColor">#34A853</Color>
+    <Color x:Key="BtnTextColor">#FFFFFF</Color>
+    <Color x:Key="GoogleColor">#EA4335</Color>
+    <Color x:Key="FacebookColor">#3B5998</Color>
+    <Color x:Key="InputFocusedColor">#FF444444</Color>
+    <Color x:Key="InputUnFocusedColor">#C8C8C8</Color>
+
+
+</ResourceDictionary>
