@@ -67,5 +67,28 @@ namespace WebFEO_API.Query
             }
             return posts;
         }
+
+        public async Task<Usuario> LocalizarUsuario(string usuario, string senha)
+        {
+            using var cmd = Db.Connection.CreateCommand();
+            cmd.CommandText = @"SELECT `id`, `usuario`, `senha`, `tipo` FROM `t_usuario` WHERE `usuario` = @usuario and `senha` = @senha";
+            cmd.Parameters.Add(new MySqlParameter
+            {
+                ParameterName = "@usuario",
+                DbType = DbType.String,
+                Value = usuario,
+            });
+
+            cmd.Parameters.Add(new MySqlParameter
+            {
+                ParameterName = "@senha",
+                DbType = DbType.String,
+                Value = senha,
+            });
+            
+            var result = await ReadAllAsync(await cmd.ExecuteReaderAsync());
+            return result.Count > 0 ? result[0] : null;
+        }
+
     }
 }

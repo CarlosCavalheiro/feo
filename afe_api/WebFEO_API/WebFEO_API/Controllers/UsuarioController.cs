@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using WebFEO_API.Models;
 using WebFEO_API.Query;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors;
+using WebFEO_API.Services;
 
 namespace WebFEO_API.Controllers
 {
@@ -18,6 +21,7 @@ namespace WebFEO_API.Controllers
 
         // GET api/usuario
         [HttpGet]
+        [Authorize]
         public async Task<IActionResult> GetLatest()
         {
             await Db.Connection.OpenAsync();
@@ -28,6 +32,7 @@ namespace WebFEO_API.Controllers
 
         // GET api/usuario/5
         [HttpGet("{id}")]
+        [Authorize]
         public async Task<IActionResult> GetOne(int id)
         {
             await Db.Connection.OpenAsync();
@@ -40,6 +45,7 @@ namespace WebFEO_API.Controllers
 
         // POST api/usuario
         [HttpPost]
+        [Authorize]
         public async Task<IActionResult> Post([FromBody] Usuario body)
         {
             await Db.Connection.OpenAsync();
@@ -50,6 +56,7 @@ namespace WebFEO_API.Controllers
 
         // PUT api/usuario/5
         [HttpPut("{id}")]
+        [Authorize]
         public async Task<IActionResult> PutOne(int id, [FromBody] Usuario body)
         {
             await Db.Connection.OpenAsync();
@@ -66,6 +73,7 @@ namespace WebFEO_API.Controllers
 
         // DELETE api/usuario/5
         [HttpDelete("{id}")]
+        [Authorize]
         public async Task<IActionResult> DeleteOne(int id)
         {
             await Db.Connection.OpenAsync();
@@ -79,12 +87,55 @@ namespace WebFEO_API.Controllers
 
         // DELETE api/usuario
         [HttpDelete]
+        [Authorize]
         public async Task<IActionResult> DeleteAll()
         {
             await Db.Connection.OpenAsync();
             var query = new UsuarioQuery(Db);
             await query.DeleteAllAsync();
             return new OkResult();
+        }
+
+        //[HttpPost]
+        //[Route("login")]
+        //[AllowAnonymous]
+        //public async Task<IActionResult> Login([FromBody] Usuario body)
+        //{
+        //    await Db.Connection.OpenAsync();
+        //    var query = new UsuarioQuery(Db);
+        //    var result = await query.LocalizarUsuario(body.Login, body.Senha);
+        //    if (result is null)
+        //        return new NotFoundResult();
+        //    return new OkObjectResult(result);
+        //}
+        [HttpPost]
+        [Route("login")]
+        [AllowAnonymous]
+        public async Task<ActionResult<dynamic>> Authenticate([FromBody] Usuario model)
+        {
+
+            await Db.Connection.OpenAsync();
+            var query = new UsuarioQuery(Db);
+
+            // Recupera o usuário
+            var result = await query.LocalizarUsuario(model.Login, model.Senha);
+
+            // Verifica se o usuário existe
+            if (result == null)
+                return NotFound(new { message = "Usuário ou senha inválidos" });
+
+            // Gera o Token
+            var token = TokenService.GenerateToken(result);
+
+            // Oculta a senha
+            result.Senha = "";
+
+            // Retorna os dados
+            return new
+            {
+                user = result,
+                token = token
+            };
         }
 
         public AppDb Db { get; }

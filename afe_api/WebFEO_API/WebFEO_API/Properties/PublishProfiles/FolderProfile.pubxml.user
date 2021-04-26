@@ -5,5 +5,6 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <_PublishTargetUrl>A:\feo\afe_api\WebFEO_API\WebFEO_API\bin\Release\netcoreapp3.1\publish\</_PublishTargetUrl>
+    <History>True|2021-04-23T23:24:26.5575035Z;True|2021-04-23T19:48:58.2639761-03:00;True|2021-04-23T19:29:19.7598427-03:00;True|2021-04-23T17:27:17.9695933-03:00;False|2021-04-23T17:26:39.3824927-03:00;True|2021-03-12T21:50:23.8645477-03:00;True|2021-03-12T21:22:58.6456794-03:00;</History>
   </PropertyGroup>
 </Project>

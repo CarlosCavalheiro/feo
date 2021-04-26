@@ -1,4 +1,5 @@
-﻿using MySqlConnector;
+﻿using Microsoft.AspNetCore.Authorization;
+using MySqlConnector;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -10,6 +11,7 @@ using WebFEO_API.Models;
 
 namespace WebFEO_API.Query
 {
+    [Authorize]
     public class ApontamentoQuery
     {
         public AppDb Db { get; }

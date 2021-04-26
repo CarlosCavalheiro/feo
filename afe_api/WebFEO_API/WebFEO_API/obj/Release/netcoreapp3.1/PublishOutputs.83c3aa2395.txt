@@ -1,0 +1,8 @@
+A:\feo\afe_api\WebFEO_API\WebFEO_API\obj\Release\netcoreapp3.1\PubTmp\Out\WebFEO_API.exe
+A:\feo\afe_api\WebFEO_API\WebFEO_API\obj\Release\netcoreapp3.1\PubTmp\Out\appsettings.Development.json
+A:\feo\afe_api\WebFEO_API\WebFEO_API\obj\Release\netcoreapp3.1\PubTmp\Out\appsettings.json
+A:\feo\afe_api\WebFEO_API\WebFEO_API\obj\Release\netcoreapp3.1\PubTmp\Out\WebFEO_API.dll
+A:\feo\afe_api\WebFEO_API\WebFEO_API\obj\Release\netcoreapp3.1\PubTmp\Out\WebFEO_API.runtimeconfig.json
+A:\feo\afe_api\WebFEO_API\WebFEO_API\obj\Release\netcoreapp3.1\PubTmp\Out\WebFEO_API.pdb
+A:\feo\afe_api\WebFEO_API\WebFEO_API\obj\Release\netcoreapp3.1\PubTmp\Out\MySqlConnector.dll
+A:\feo\afe_api\WebFEO_API\WebFEO_API\obj\Release\netcoreapp3.1\PubTmp\Out\WebFEO_API.deps.json

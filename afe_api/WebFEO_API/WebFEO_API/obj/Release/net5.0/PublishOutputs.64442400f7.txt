@@ -1,0 +1,15 @@
+A:\feo\afe_api\WebFEO_API\WebFEO_API\obj\Release\net5.0\PubTmp\Out\WebFEO_API.exe
+A:\feo\afe_api\WebFEO_API\WebFEO_API\obj\Release\net5.0\PubTmp\Out\appsettings.Development.json
+A:\feo\afe_api\WebFEO_API\WebFEO_API\obj\Release\net5.0\PubTmp\Out\appsettings.json
+A:\feo\afe_api\WebFEO_API\WebFEO_API\obj\Release\net5.0\PubTmp\Out\WebFEO_API.dll
+A:\feo\afe_api\WebFEO_API\WebFEO_API\obj\Release\net5.0\PubTmp\Out\WebFEO_API.runtimeconfig.json
+A:\feo\afe_api\WebFEO_API\WebFEO_API\obj\Release\net5.0\PubTmp\Out\WebFEO_API.pdb
+A:\feo\afe_api\WebFEO_API\WebFEO_API\obj\Release\net5.0\PubTmp\Out\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+A:\feo\afe_api\WebFEO_API\WebFEO_API\obj\Release\net5.0\PubTmp\Out\Microsoft.IdentityModel.JsonWebTokens.dll
+A:\feo\afe_api\WebFEO_API\WebFEO_API\obj\Release\net5.0\PubTmp\Out\Microsoft.IdentityModel.Logging.dll
+A:\feo\afe_api\WebFEO_API\WebFEO_API\obj\Release\net5.0\PubTmp\Out\Microsoft.IdentityModel.Protocols.dll
+A:\feo\afe_api\WebFEO_API\WebFEO_API\obj\Release\net5.0\PubTmp\Out\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+A:\feo\afe_api\WebFEO_API\WebFEO_API\obj\Release\net5.0\PubTmp\Out\Microsoft.IdentityModel.Tokens.dll
+A:\feo\afe_api\WebFEO_API\WebFEO_API\obj\Release\net5.0\PubTmp\Out\MySqlConnector.dll
+A:\feo\afe_api\WebFEO_API\WebFEO_API\obj\Release\net5.0\PubTmp\Out\System.IdentityModel.Tokens.Jwt.dll
+A:\feo\afe_api\WebFEO_API\WebFEO_API\obj\Release\net5.0\PubTmp\Out\WebFEO_API.deps.json

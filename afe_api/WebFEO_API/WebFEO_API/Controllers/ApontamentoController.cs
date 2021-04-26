@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using WebFEO_API.Models;
 using WebFEO_API.Query;
+using Microsoft.AspNetCore.Authorization;
 
 namespace WebFEO_API.Controllers
 {
