@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FEC_APP.Views.Apontamento.ListarApontamento"
-             Title="Lisar Apontamentos">
+             Title="Listar Apontamentos">
     <ContentPage.Content>
         <StackLayout>
             <Frame Margin="10, 10, 15, 10" BackgroundColor="{StaticResource BackgroundColorApp}">
