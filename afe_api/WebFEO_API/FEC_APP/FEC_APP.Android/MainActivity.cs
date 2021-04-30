@@ -7,7 +7,7 @@ using Android.OS;
 
 namespace FEC_APP.Droid
 {
-    [Activity(Label = "FEC_APP", Icon = "@mipmap/icon", 
+    [Activity(Label = "FEC Apontamento", Icon = "@mipmap/icon", 
         Theme = "@style/MainTheme", 
         MainLauncher = false, 
         ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation | ConfigChanges.UiMode | ConfigChanges.ScreenLayout | ConfigChanges.SmallestScreenSize )]
@@ -19,6 +19,8 @@ namespace FEC_APP.Droid
 
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+            Rg.Plugins.Popup.Popup.Init(this);
+
 
             LoadApplication(new App());
         }

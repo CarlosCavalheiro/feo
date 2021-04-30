@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "7fZwWubL9c7mwk/k/pEEIL1MPcmIWXLmBwJ+21dSTJ+Lcp4SyFgoYtyVvC5Dku/4bUu6Q5o5xB8r1aWLgBVkyQ==",
+  "dgSpecHash": "Edt0yUpmYe9nb66k3UsByBVX7mJAlwKrjPsjywM6gEAXbrVLpH4YqILGHSEpDNedr/+DCaE5P4zT9xdU/V23IA==",
   "success": true,
   "projectFilePath": "A:\\feo\\afe_api\\WebFEO_API\\WebFEO_API\\WebFEO_API.csproj",
   "expectedPackageFiles": [
@@ -47,6 +47,7 @@
     "C:\\Users\\sn1037463\\.nuget\\packages\\microsoft.netcore.platforms\\2.0.0\\microsoft.netcore.platforms.2.0.0.nupkg.sha512",
     "C:\\Users\\sn1037463\\.nuget\\packages\\microsoft.win32.registry\\4.5.0\\microsoft.win32.registry.4.5.0.nupkg.sha512",
     "C:\\Users\\sn1037463\\.nuget\\packages\\mysqlconnector\\1.2.1\\mysqlconnector.1.2.1.nupkg.sha512",
+    "C:\\Users\\sn1037463\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\sn1037463\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
     "C:\\Users\\sn1037463\\.nuget\\packages\\system.collections.immutable\\5.0.0\\system.collections.immutable.5.0.0.nupkg.sha512",
     "C:\\Users\\sn1037463\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",

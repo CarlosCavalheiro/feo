@@ -2,13 +2,70 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:FEC_APP.ViewModels"
              mc:Ignorable="d"
              x:Class="FEC_APP.Views.LoginPage"
              Shell.NavBarIsVisible="False">
+    <ContentPage.BindingContext>
+        <local:LoginViewModel />
+    </ContentPage.BindingContext>
     <ContentPage.Content>
-        <StackLayout Padding="10,0,10,0" VerticalOptions="Center">
-            <Button VerticalOptions="Center" Text="Login" Command="{Binding LoginCommand}"/>
-        </StackLayout>
+        <ScrollView>
+            <StackLayout Orientation="Vertical">
+                <Frame
+                        VerticalOptions="CenterAndExpand"
+                        Margin="5"
+                        HasShadow="false" BackgroundColor="Transparent">
+                    <StackLayout>
+                            <Image Source="{AppThemeBinding 
+                                    Light=logo_fec.png, 
+                                    Dark=logo_fec.png, 
+                                    Default=logo_fec.png}" 
+                                    WidthRequest="280"/>
+                            
+                            <Entry Style="{DynamicResource Rubik}"                                   
+                                   BackgroundColor="Transparent" 
+                                   Text="{Binding Email}"
+                                   TextColor="{DynamicResource TextPrimaryColor}"/>
+
+                            <Entry IsPassword="True"
+                                   FontFamily="{DynamicResource Rubik}" 
+                                   BackgroundColor="Transparent" 
+                                   Text="{Binding Senha}"
+                                   TextColor="{DynamicResource TextPrimaryColor}"/>
+
+                            <StackLayout Margin="0, 10, 0, 0" HorizontalOptions="Center" >
+                            <Button Text="Esqueci minha senha"
+                                    Style="{DynamicResource BtnRememberPassword}"/>
+                        </StackLayout>
+
+                        <StackLayout Margin="0, 10, 0, 0">
+                            <Button Text="Acessar"
+                                    Style="{DynamicResource BtnAccess}"
+                                        Command="{Binding LoginCommand}"
+                                    />
+                        </StackLayout>
+
+                        <!--<Button Text="Sou novo por aqui!"
+                                Style="{DynamicResource BtnNewAccess}"                            
+                                x:Name="BtnNovoCadastro"                            
+                                Clicked="BtnNovoCadastro_Clicked"
+                                />-->
+
+                    </StackLayout>
+
+                </Frame>
+                <Label Text="Escola SENAI Lençóis Paulista - SP"                            
+                        Style="{DynamicResource TxtNormal}"
+                        FontSize="15"
+                        HorizontalTextAlignment="Center"
+                        TextColor="{DynamicResource TextPrimaryColor}"
+                        Margin="0, 5, 0, 0" Padding="0"/>
+                <Label x:Name="lblVersao" Style="{DynamicResource TxtVersion}" TextColor="{DynamicResource TextPrimaryColor}" Margin="0, 5, 0, 0" Padding="0"/>
+                <Label x:Name="lblDev" Text="Desenvolvido por Carlos Cavalheiro"  Style="{DynamicResource TxtVersion}" TextColor="{DynamicResource TextPrimaryColor}" Margin="0, 5, 0, 0" Padding="0"/>
+
+            </StackLayout>
+        </ScrollView>
+
     </ContentPage.Content>
 </ContentPage>

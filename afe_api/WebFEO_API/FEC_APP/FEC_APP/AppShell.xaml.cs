@@ -1,4 +1,5 @@
-﻿using FEC_APP.ViewModels;
+﻿using FEC_APP.Services;
+using FEC_APP.ViewModels;
 using FEC_APP.Views;
 using System;
 using System.Collections.Generic;
@@ -8,9 +9,15 @@ namespace FEC_APP
 {
     public partial class AppShell : Xamarin.Forms.Shell
     {
+        public string UsuarionNome => "Usuário Nome";
+        public string UsuarioLogin => AppService.UsuarioRegistrado().Login;
+        public string UsuarioTipo => AppService.UsuarioRegistrado().Tipo;
+
         public AppShell()
         {
             InitializeComponent();
+            lbNome.Text = UsuarioLogin;
+            lbTipo.Text = UsuarioTipo;
         }
 
         private async void OnMenuItemClicked(object sender, EventArgs e)

@@ -1,4 +1,5 @@
 ﻿using FEC_APP.ViewModels;
+using PropertyChanged;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,12 +11,14 @@ using Xamarin.Forms.Xaml;
 namespace FEC_APP.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
+    [AddINotifyPropertyChangedInterface]
     public partial class LoginPage : ContentPage
     {
         public LoginPage()
         {
             InitializeComponent();
-            this.BindingContext = new LoginViewModel();
+            lblVersao.Text = string.Format("Versão {0}.", "1.0.0");
+
         }
     }
 }

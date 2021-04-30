@@ -127,15 +127,18 @@ namespace WebFEO_API.Controllers
             // Gera o Token
             var token = TokenService.GenerateToken(result);
 
+            result.Token = token;
+
             // Oculta a senha
             result.Senha = "";
 
             // Retorna os dados
-            return new
-            {
-                user = result,
-                token = token
-            };
+            return result;
+            //return new
+            //{
+            //    usuario = result,
+            //    token = token
+            //};
         }
 
         public AppDb Db { get; }

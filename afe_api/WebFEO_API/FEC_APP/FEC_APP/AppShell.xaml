@@ -81,8 +81,8 @@
                     </StackLayout>
                 </StackLayout>
 
-                <Label Grid.Row="1" Margin="20, 0, 0, 0" FontSize="Medium" TextColor="{StaticResource TextPrimaryColor}" FontFamily="{StaticResource RubikBold}" Opacity="0.8">Fulano de Tal</Label>
-                <Label Grid.Row="2" Margin="20, 0, 0, 0" FontSize="Small" TextColor="{StaticResource TextPrimaryColor}" FontFamily="{StaticResource Rubik}" Opacity="0.8">Docente Olimpiada</Label>
+                <Label x:Name="lbNome" Grid.Row="1" Margin="20, 0, 0, 0" FontSize="Medium" TextColor="{StaticResource TextPrimaryColor}" FontFamily="{StaticResource RubikBold}" Opacity="0.8">Fulano de Tal</Label>
+                <Label x:Name="lbTipo" Grid.Row="2" Margin="20, 0, 0, 0" FontSize="Small" TextColor="{StaticResource TextPrimaryColor}" FontFamily="{StaticResource Rubik}" Opacity="0.8">Docente Olimpiada</Label>
 
             </Grid>
         </DataTemplate>

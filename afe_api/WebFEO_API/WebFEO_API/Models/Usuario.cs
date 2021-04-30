@@ -1,4 +1,5 @@
 ﻿using MySqlConnector;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -9,10 +10,21 @@ namespace WebFEO_API.Models
 {
     public class Usuario
     {
+
+        [JsonProperty("id")]
         public long Id { get; set; }
+
+        [JsonProperty("login")]
         public string Login { get; set; }
+
+        [JsonProperty("senha")]
         public string Senha { get; set; }
+
+        [JsonProperty("tipo")]
         public string Tipo { get; set; }
+
+        [JsonProperty("token")]
+        public string Token { get; set; }
 
         internal AppDb Db { get; set; }
 

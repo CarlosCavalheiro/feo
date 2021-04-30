@@ -37,3 +37,4 @@ A:\feo\afe_api\WebFEO_API\WebFEO_API\obj\Release\net5.0\WebFEO_API.dll
 A:\feo\afe_api\WebFEO_API\WebFEO_API\obj\Release\net5.0\ref\WebFEO_API.dll
 A:\feo\afe_api\WebFEO_API\WebFEO_API\obj\Release\net5.0\WebFEO_API.pdb
 A:\feo\afe_api\WebFEO_API\WebFEO_API\obj\Release\net5.0\WebFEO_API.genruntimeconfig.cache
+A:\feo\afe_api\WebFEO_API\WebFEO_API\bin\Release\net5.0\Newtonsoft.Json.dll

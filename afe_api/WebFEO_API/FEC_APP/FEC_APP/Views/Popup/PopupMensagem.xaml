@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<rg:PopupPage  xmlns:rg="http://rotorgames.com"
+               xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FEC_APP.Views.Popup.PopupMensagem">
+    <rg:PopupPage.Animation>
+        <rg:ScaleAnimation
+              PositionIn="Bottom"
+              PositionOut="Center"
+              ScaleIn="1"
+              ScaleOut="0.7"
+              DurationIn="700"
+              EasingIn="BounceOut"/>
+    </rg:PopupPage.Animation>
+    <Frame VerticalOptions="Center" 
+           HorizontalOptions="Center"
+           BackgroundColor="{DynamicResource BackgroundColor}"
+           Margin="10" HeightRequest="200" WidthRequest="300" Padding="10" CornerRadius="10">
+        <StackLayout Orientation="Vertical" BackgroundColor="Transparent" VerticalOptions="FillAndExpand">
+            <Label x:Name="lblTitulo" Text="TITULO" HorizontalTextAlignment="Center" FontFamily="{DynamicResource RubikMedium}" FontSize="20"/>
+            <Label x:Name="lblMensagem" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontFamily="{DynamicResource Rubik}" FontSize="18" HeightRequest="120" BackgroundColor="Transparent"/>
+            <StackLayout BackgroundColor="Transparent" VerticalOptions="EndAndExpand" Orientation="Vertical">
+                <Button x:Name="BtnFechar" Style="{DynamicResource BtnNormal}" HeightRequest="50" CornerRadius="10" Text="Ok" Clicked="OnClose"></Button>
+            </StackLayout>
+        </StackLayout>
+    </Frame>
+</rg:PopupPage>
