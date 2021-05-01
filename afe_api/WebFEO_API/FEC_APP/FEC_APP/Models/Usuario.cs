@@ -15,6 +15,9 @@ namespace FEC_APP.Models
 
         [JsonProperty("senha")]
         public string Senha { get; set; }
+        
+        [JsonProperty("nome")]
+        public string Nome { get; set; }
 
         [JsonProperty("tipo")]
         public string Tipo { get; set; }

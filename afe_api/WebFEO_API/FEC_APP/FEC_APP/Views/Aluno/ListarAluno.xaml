@@ -1,17 +1,123 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:vm="clr-namespace:FEC_APP.ViewModels"
              x:Class="FEC_APP.Views.Aluno.ListarAluno"
              Title="Listar Alunos"
              >
+    <ContentPage.BindingContext>
+        <vm:ListarAlunoViewModel/>
+    </ContentPage.BindingContext>
     <ContentPage.Content>
-        <StackLayout>
-            <Frame Margin="10, 10, 15, 10" BackgroundColor="{StaticResource BackgroundColorApp}">
-                <Label Text="Alunos Cadastrados" FontFamily="{StaticResource RubikBold}"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-            </Frame>
-            
-        </StackLayout>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <StackLayout Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
+                <StackLayout Margin="10" >
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="5"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <BoxView Grid.Row="0" Grid.Column="0" BackgroundColor="#d7703c" WidthRequest="5" HeightRequest="30" CornerRadius="5"/>
+                        <Label Text="Bombas Cadastradas"
+                                   Grid.Row="0" Grid.Column="1"
+                                   FontSize="18"
+                                   FontFamily="{DynamicResource RubikBold}"
+                                   TextColor="{DynamicResource TextPrimaryColor}"
+                                   VerticalTextAlignment="Center"                       
+                                   />
+                    </Grid>
+                </StackLayout>
+
+                <StackLayout Margin="10">
+                    <ScrollView>
+                        <ListView x:Name="lvBombas"  
+                                      SeparatorColor="Transparent"
+                                      ItemSelected="OnItemSelected"
+                                      ItemsSource="{Binding ListarAlunos}"
+                                      HasUnevenRows="True">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell>
+                                        <Frame BackgroundColor="{DynamicResource BackgroundColor}"                                                  
+                                                   CornerRadius="5"
+                                                   Padding="0" 
+                                                   VerticalOptions="Center"
+                                                   Margin="5">
+
+                                            <StackLayout Orientation="Horizontal">
+                                                <!--<Frame Margin="10"                                                           
+                                                           BackgroundColor="{DynamicResource BackgroundColorApp}"
+                                                           CornerRadius="50"
+                                                           HeightRequest="60"                                                       
+                                                           IsClippedToBounds="True"
+                                                           HorizontalOptions="Center"
+                                                           VerticalOptions="Center">
+                                                    <Image Source="{Binding Imagem}"
+                                                                  Aspect="AspectFit"
+                                                                  Margin="-5"
+                                                                  HeightRequest="70"
+                                                                  WidthRequest="70"/>
+                                                </Frame>-->
+
+                                                <StackLayout HorizontalOptions="StartAndExpand" 
+                                                                 VerticalOptions="Center">
+                                                    <Label Text="{Binding Id, StringFormat='#{0}'}"
+                                                               HorizontalTextAlignment="Start"
+                                                               Style="{DynamicResource TxtNormal}" 
+                                                               FontSize="14" />
+                                                    <Label Text="{Binding Nome}" 
+                                                               HorizontalTextAlignment="Start"
+                                                               Style="{DynamicResource TxtNormal}" 
+                                                               FontSize="15"/>
+                                                    <Label Text="{Binding Modalidade}" 
+                                                               HorizontalTextAlignment="Start"
+                                                               Style="{DynamicResource TxtNormal}" 
+                                                               FontSize="10"/>
+                                                </StackLayout>
+
+                                                <Button BackgroundColor="{DynamicResource BackgroundColor}"  
+                                                            FontFamily="{DynamicResource FonteIcon}" 
+                                                            TextColor="{DynamicResource TextSecondaryColor}" 
+                                                            Text="&#xe820;" 
+                                                            FontSize="20" 
+                                                            WidthRequest="50"
+                                                            CommandParameter="{Binding Id}"
+                                                        />
+                                                <!--Clicked="ClickEditarBomba"-->
+
+                                            </StackLayout>
+                                        </Frame>
+                                    </ViewCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </ScrollView>
+                </StackLayout>
+
+            </StackLayout>
+            <Button Grid.Row="0"  Grid.Column="1"
+                        Text="&#xe844;" 
+                        FontSize="30"                    
+                        Padding="0, 3, 0, 0"
+                        FontFamily="{StaticResource FonteIcon}"
+                        BorderColor="{DynamicResource BackgroundColor}" 
+                        BorderWidth="4"
+                        FontAttributes="Bold" 
+                        BackgroundColor="{DynamicResource BtnBackgroundColor}" 
+                        BorderRadius="50"
+                        TextColor="White" 
+                        HorizontalOptions="End" 
+                        VerticalOptions="End"
+                        WidthRequest="70" HeightRequest="70"
+                        Margin="0,0,20,22" 
+                        x:Name="btnNovo"
+                        />
+        </Grid>
+
     </ContentPage.Content>
 </ContentPage>

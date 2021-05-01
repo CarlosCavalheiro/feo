@@ -5,66 +5,91 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:FEC_APP.ViewModels"
              mc:Ignorable="d"
              x:Class="FEC_APP.Views.LoginPage"
-             Shell.NavBarIsVisible="False">
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="{StaticResource Primary}"
+             >
     <ContentPage.BindingContext>
         <local:LoginViewModel />
     </ContentPage.BindingContext>
     <ContentPage.Content>
         <ScrollView>
-            <StackLayout Orientation="Vertical">
-                <Frame
+            <Grid RowDefinitions="*" ColumnDefinitions="*">
+                <Frame Grid.Row="0" Grid.Column="0" VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand" HeightRequest="620">
+                    <Frame.Background>
+                        <LinearGradientBrush EndPoint="0,1">
+                            <GradientStop Color="{StaticResource Primary}" Offset="0.1"/>
+                            <GradientStop Color="Transparent" Offset="1.0" />
+                        </LinearGradientBrush>
+                    </Frame.Background>
+                </Frame>
+
+                <StackLayout Grid.Row="0" Grid.Column="0" Orientation="Vertical" Margin="5, 20, 5, 5" VerticalOptions="CenterAndExpand">
+
+                    <Frame
                         VerticalOptions="CenterAndExpand"
-                        Margin="5"
-                        HasShadow="false" BackgroundColor="Transparent">
-                    <StackLayout>
+                        CornerRadius="10"
+                        Margin="20"
+                        HasShadow="false" BackgroundColor="{DynamicResource BackgroundColor}">
+
+                        <StackLayout Margin="0, 10, 0, 0">
                             <Image Source="{AppThemeBinding 
                                     Light=logo_fec.png, 
                                     Dark=logo_fec.png, 
                                     Default=logo_fec.png}" 
                                     WidthRequest="280"/>
-                            
-                            <Entry Style="{DynamicResource Rubik}"                                   
+
+                            <Frame Margin="10, 30, 10, 10" Padding="5" BorderColor="{DynamicResource BackgroundColorApp}" HasShadow="False" CornerRadius="5">
+                                <Entry FontFamily="{DynamicResource Rubik}"                                          
+                                   Placeholder="usuario@email.com.br"
                                    BackgroundColor="Transparent" 
                                    Text="{Binding Email}"
-                                   TextColor="{DynamicResource TextPrimaryColor}"/>
+                                   TextColor="{DynamicResource TextPrimaryColor}"
+                                   />
+                            </Frame>
 
-                            <Entry IsPassword="True"
+                            <Frame Margin="10" Padding="5" BorderColor="{DynamicResource BackgroundColorApp}" HasShadow="False" CornerRadius="5">
+                                <Entry IsPassword="True"
+                                    Placeholder="Senha"
                                    FontFamily="{DynamicResource Rubik}" 
                                    BackgroundColor="Transparent" 
                                    Text="{Binding Senha}"
                                    TextColor="{DynamicResource TextPrimaryColor}"/>
+                            </Frame>
 
-                            <StackLayout Margin="0, 10, 0, 0" HorizontalOptions="Center" >
-                            <Button Text="Esqueci minha senha"
-                                    Style="{DynamicResource BtnRememberPassword}"/>
-                        </StackLayout>
-
-                        <StackLayout Margin="0, 10, 0, 0">
-                            <Button Text="Acessar"
+                            <StackLayout Margin="0, 10, 0, 0">
+                                <Button Text="Acessar"
                                     Style="{DynamicResource BtnAccess}"
                                         Command="{Binding LoginCommand}"
                                     />
-                        </StackLayout>
+                            </StackLayout>
 
-                        <!--<Button Text="Sou novo por aqui!"
+                            <StackLayout Margin="0, 10, 0, 50" HorizontalOptions="Center" >
+                                <Button Text="Esqueci minha senha"
+                                    Style="{DynamicResource BtnRememberPassword}"/>
+                            </StackLayout>
+
+                            <!--<Button Text="Sou novo por aqui!"
                                 Style="{DynamicResource BtnNewAccess}"                            
                                 x:Name="BtnNovoCadastro"                            
                                 Clicked="BtnNovoCadastro_Clicked"
                                 />-->
 
-                    </StackLayout>
 
-                </Frame>
-                <Label Text="Escola SENAI Lençóis Paulista - SP"                            
-                        Style="{DynamicResource TxtNormal}"
-                        FontSize="15"
-                        HorizontalTextAlignment="Center"
-                        TextColor="{DynamicResource TextPrimaryColor}"
-                        Margin="0, 5, 0, 0" Padding="0"/>
-                <Label x:Name="lblVersao" Style="{DynamicResource TxtVersion}" TextColor="{DynamicResource TextPrimaryColor}" Margin="0, 5, 0, 0" Padding="0"/>
-                <Label x:Name="lblDev" Text="Desenvolvido por Carlos Cavalheiro"  Style="{DynamicResource TxtVersion}" TextColor="{DynamicResource TextPrimaryColor}" Margin="0, 5, 0, 0" Padding="0"/>
+                            <Image Source="logo_senai.jpg" HeightRequest="30"/>
+                            <Label Text="Escola SENAI de Lençóis Paulista - SP"                            
+                                    Style="{DynamicResource TxtNormal}"
+                                    FontSize="15"
+                                    HorizontalTextAlignment="Center"
+                                    TextColor="{StaticResource TextPrimaryColor}"
+                                    Margin="0, 5, 0, 0" Padding="0"/>
+                        </StackLayout>
 
-            </StackLayout>
+                    </Frame>
+
+                    <Label x:Name="lblDev" Text="Desenvolvido por Carlos Cavalheiro" FontFamily="{StaticResource Rubik}" FontSize="12" TextColor="{StaticResource TextSecondaryColor}" Margin="0, 0, 0, 0" Padding="0" HorizontalTextAlignment="Center" VerticalTextAlignment="End"/>
+                    <Label x:Name="lblVersao" FontSize="10" TextColor="{StaticResource TextSecondaryColor}" FontFamily="{StaticResource Rubik}" Margin="0, 2, 0, 5" Padding="0" HorizontalTextAlignment="Center" VerticalTextAlignment="End"/>
+                </StackLayout>
+            </Grid>
         </ScrollView>
 
     </ContentPage.Content>

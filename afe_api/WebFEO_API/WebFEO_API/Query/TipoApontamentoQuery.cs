@@ -10,7 +10,6 @@ using WebFEO_API.Models;
 
 namespace WebFEO_API.Query
 {
-    [Authorize]
     public class TipoApontamentoQuery
     {
         public AppDb Db { get; }

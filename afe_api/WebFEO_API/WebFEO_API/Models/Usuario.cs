@@ -22,6 +22,9 @@ namespace WebFEO_API.Models
 
         [JsonProperty("tipo")]
         public string Tipo { get; set; }
+        
+        [JsonProperty("nome")]
+        public string Nome { get; set; }
 
         [JsonProperty("token")]
         public string Token { get; set; }
@@ -40,7 +43,7 @@ namespace WebFEO_API.Models
         public async Task InsertAsync()
         {
             using var cmd = Db.Connection.CreateCommand();
-            cmd.CommandText = @"INSERT INTO `t_usuario` (`usuario`, `senha`,`tipo`) VALUES (@usuario, @senha, @tipo);";
+            cmd.CommandText = @"INSERT INTO `t_usuario` (`usuario`, `senha`,`tipo`, `nome`) VALUES (@usuario, @senha, @tipo, @nome);";
             BindParams(cmd);
             await cmd.ExecuteNonQueryAsync();
             Id = (int)cmd.LastInsertedId;
@@ -49,7 +52,7 @@ namespace WebFEO_API.Models
         public async Task UpdateAsync()
         {
             using var cmd = Db.Connection.CreateCommand();
-            cmd.CommandText = @"UPDATE `t_usuario` SET `usuario` = @usuario, `senha` = @senha, `tipo` = @tipo WHERE `Id` = @id;";
+            cmd.CommandText = @"UPDATE `t_usuario` SET `usuario` = @usuario, `senha` = @senha, `tipo` = @tipo, `nome` = @nome WHERE `Id` = @id;";
             BindParams(cmd);
             BindId(cmd);
             await cmd.ExecuteNonQueryAsync();
@@ -92,6 +95,12 @@ namespace WebFEO_API.Models
                 ParameterName = "@tipo",
                 DbType = DbType.String,
                 Value = Tipo,
+            });
+            cmd.Parameters.Add(new MySqlParameter
+            {
+                ParameterName = "@nome",
+                DbType = DbType.String,
+                Value = Nome,
             });
         }
 

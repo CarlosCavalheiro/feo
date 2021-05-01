@@ -21,7 +21,7 @@ namespace WebFEO_API.Query
         public async Task<Usuario> FindOneAsync(int id)
         {
             using var cmd = Db.Connection.CreateCommand();
-            cmd.CommandText = @"SELECT `id`, `usuario`, `senha`, `tipo` FROM `t_usuario` WHERE `id` = @id";
+            cmd.CommandText = @"SELECT `id`, `usuario`, `senha`, `tipo`, `nome` FROM `t_usuario` WHERE `id` = @id";
             cmd.Parameters.Add(new MySqlParameter
             {
                 ParameterName = "@id",
@@ -35,7 +35,7 @@ namespace WebFEO_API.Query
         public async Task<List<Usuario>> LatestPostsAsync()
         {
             using var cmd = Db.Connection.CreateCommand();
-            cmd.CommandText = @"SELECT `id`, `usuario`, `senha`, `tipo` FROM `t_usuario` ORDER BY `id` DESC LIMIT 10;";
+            cmd.CommandText = @"SELECT `id`, `usuario`, `senha`, `tipo`, `nome` FROM `t_usuario` ORDER BY `id` DESC LIMIT 10;";
             return await ReadAllAsync(await cmd.ExecuteReaderAsync());
         }
 
@@ -61,6 +61,7 @@ namespace WebFEO_API.Query
                         Login = reader.GetString(1),
                         Senha = reader.GetString(2),
                         Tipo = reader.GetString(3),
+                        Nome = reader.GetString(4),
                     };
                     posts.Add(post);
                 }
@@ -71,7 +72,7 @@ namespace WebFEO_API.Query
         public async Task<Usuario> LocalizarUsuario(string usuario, string senha)
         {
             using var cmd = Db.Connection.CreateCommand();
-            cmd.CommandText = @"SELECT `id`, `usuario`, `senha`, `tipo` FROM `t_usuario` WHERE `usuario` = @usuario and `senha` = @senha";
+            cmd.CommandText = @"SELECT `id`, `usuario`, `senha`, `tipo`, `nome` FROM `t_usuario` WHERE `usuario` = @usuario and `senha` = @senha";
             cmd.Parameters.Add(new MySqlParameter
             {
                 ParameterName = "@usuario",

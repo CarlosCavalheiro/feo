@@ -11,7 +11,6 @@ using WebFEO_API.Models;
 
 namespace WebFEO_API.Query
 {
-    [Authorize]
     public class ApontamentoQuery
     {
         public AppDb Db { get; }

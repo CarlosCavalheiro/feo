@@ -13,7 +13,7 @@
     <Color x:Key="BackgroundColor">#FFFFFF</Color>
     <Color x:Key="BackgroundColorApp">#F0F0F0</Color>
     <Color x:Key="TextPrimaryColor">#393738</Color>
-    <Color x:Key="TextSecondaryColor">#FF444444</Color>
+    <Color x:Key="TextSecondaryColor">#FFFFFF</Color>
     <Color x:Key="TextTernaryColor">#393738</Color>
     <Color x:Key="BtnBackgroundColor">#4285F4</Color>
     <Color x:Key="Btn2BackgroundColor">#FBBC05</Color>

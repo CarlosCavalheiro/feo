@@ -6,8 +6,8 @@
 
   <item android:drawable="@drawable/logo_splash_fec" 
         android:gravity="center" 
-        android:width="350dp" 
-        android:height="155dp"
+        android:width="251dp" 
+        android:height="93dp"
 		/>
 
 </layer-list>

@@ -11,6 +11,7 @@ namespace WebFEO_API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class ResponsavelController : ControllerBase
     {
         public ResponsavelController(AppDb db)

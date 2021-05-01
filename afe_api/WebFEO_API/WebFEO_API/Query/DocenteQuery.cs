@@ -10,7 +10,6 @@ using WebFEO_API.Models;
 
 namespace WebFEO_API.Query
 {
-    [Authorize]
     public class DocenteQuery
     {
         public AppDb Db { get; }

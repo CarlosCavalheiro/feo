@@ -598,3 +598,4 @@ A:\feo\afe_api\WebFEO_API\FEC_APP\FEC_APP.Android\obj\Debug\110\android\assets\R
 A:\feo\afe_api\WebFEO_API\FEC_APP\FEC_APP.Android\obj\Debug\110\android\src\crc643dd37f507f3d9710\PopupPageRenderer.java
 A:\feo\afe_api\WebFEO_API\FEC_APP\FEC_APP.Android\obj\Debug\110\android\src\crc64fdbeeba101bd56dc\RgGestureDetectorListener.java
 A:\feo\afe_api\WebFEO_API\FEC_APP\FEC_APP.Android\obj\Debug\110\res\xml\network_security_config.xml
+A:\feo\afe_api\WebFEO_API\FEC_APP\FEC_APP.Android\obj\Debug\110\res\drawable\logo_senai.jpg

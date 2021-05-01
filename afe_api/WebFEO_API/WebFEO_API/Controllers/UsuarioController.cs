@@ -67,6 +67,7 @@ namespace WebFEO_API.Controllers
             result.Login = body.Login;
             result.Senha = body.Senha;
             result.Tipo = body.Tipo;
+            result.Nome = body.Nome;
             await result.UpdateAsync();
             return new OkObjectResult(result);
         }

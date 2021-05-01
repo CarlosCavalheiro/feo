@@ -9,6 +9,7 @@ namespace WebFEO_API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class TipoApontamentoController : ControllerBase
     {
 

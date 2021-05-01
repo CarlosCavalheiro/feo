@@ -9,7 +9,7 @@ namespace FEC_APP.ViewModels
     [AddINotifyPropertyChangedInterface]
     public class PrincipalViewModel
     {
-        public string UsuarionNome => "Usuário Nome";
+        public string UsuarioNome => AppService.UsuarioRegistrado().Nome;
         public string UsuarioLogin => AppService.UsuarioRegistrado().Login;
         public string UsuarioTipo => AppService.UsuarioRegistrado().Tipo;
 
