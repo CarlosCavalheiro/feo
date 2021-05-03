@@ -18,5 +18,10 @@ namespace FEC_APP.Views.Aluno
         {
             InitializeComponent();
         }
+
+        private void OnItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+
+        }
     }
 }
