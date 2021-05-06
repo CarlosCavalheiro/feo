@@ -8,6 +8,10 @@
                     >
 
     <Color x:Key="NavigationPrimary">#393738</Color>
+    <Color x:Key="Background1">#4285F4</Color>
+    <Color x:Key="Background2">#FBBC05</Color>
+    <Color x:Key="Background3">#EA4335</Color>
+    <Color x:Key="Background4">#34A853</Color>
     <Color x:Key="Primary">#2196F3</Color>
     <Color x:Key="colorPrimary">#FFFFFF</Color>
     <Color x:Key="BackgroundColor">#FFFFFF</Color>

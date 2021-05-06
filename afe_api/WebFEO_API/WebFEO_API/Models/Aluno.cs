@@ -13,7 +13,7 @@ namespace WebFEO_API.Models
         [JsonProperty("id")]
         public long Id { get; set; }
 
-        [JsonProperty("nome_completo")]
+        [JsonProperty("nomeCompleto")]
         public string NomeCompleto { get; set; }
         
         [JsonProperty("foto")]
@@ -47,13 +47,13 @@ namespace WebFEO_API.Models
         public string Telefone2 { get; set; }
 
 
-        [JsonProperty("reponsavel_id")]
+        [JsonProperty("reponsavelId")]
         public long ResponsavelId { get; set; }
 
-        [JsonProperty("docente_id")]
+        [JsonProperty("docenteId")]
         public long DocenteId { get; set; }
 
-        [JsonProperty("usuario_id")]
+        [JsonProperty("usuarioId")]
         public long UsuarioId { get; set; }
 
 

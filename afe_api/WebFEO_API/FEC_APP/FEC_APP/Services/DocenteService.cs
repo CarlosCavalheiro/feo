@@ -9,10 +9,10 @@ using System.Threading.Tasks;
 
 namespace FEC_APP.Services
 {
-    class AlunoService : WebServiceManager
+    class DocenteService : WebServiceManager
     {
 
-        private const string URL = "http://fecapi.ddns.net/api/aluno/{0}";
+        private const string URL = "http://fecapi.ddns.net/api/docente/{0}";
 
         private Usuario usuario = null;
         private async Task<bool> UsuarioValido()
@@ -31,7 +31,7 @@ namespace FEC_APP.Services
             return _usuario == null ? false : true;
         }
 
-        public async Task<List<Aluno>> Listar()
+        public async Task<List<Docente>> Listar()
         {
             if (await UsuarioValido())
             {
@@ -43,9 +43,9 @@ namespace FEC_APP.Services
                 {
                     string retorno = await responseMessage.Content.ReadAsStringAsync();
 
-                    List<Aluno> listaAlunos = JsonConvert.DeserializeObject<List<Aluno>>(retorno);
+                    List<Docente> listaDocente = JsonConvert.DeserializeObject<List<Docente>>(retorno);
 
-                    return listaAlunos;
+                    return listaDocente;
                 }
                 else
                 {

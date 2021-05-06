@@ -1,4 +1,5 @@
 ﻿using MySqlConnector;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -9,7 +10,10 @@ namespace WebFEO_API.Models
 {
     public class TipoApontamento
     {
+        [JsonProperty("id")]
         public long Id { get; set; }
+
+        [JsonProperty("descricao")]
         public string Descricao { get; set; }
       
         internal AppDb Db { get; set; }

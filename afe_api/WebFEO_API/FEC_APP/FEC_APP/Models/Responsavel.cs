@@ -1,13 +1,14 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Data;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace FEC_APP.Models
 {
-    public class Aluno
+    public class Responsavel
     {
-
         [JsonProperty("id")]
         public long Id { get; set; }
 
@@ -16,9 +17,6 @@ namespace FEC_APP.Models
 
         [JsonProperty("foto")]
         public string Foto { get; set; }
-
-        [JsonProperty("modalidade")]
-        public string Modalidade { get; set; }
 
         [JsonProperty("cep")]
         public string CEP { get; set; }
@@ -45,13 +43,8 @@ namespace FEC_APP.Models
         public string Telefone2 { get; set; }
 
 
-        [JsonProperty("reponsavelId")]
-        public long ResponsavelId { get; set; }
-
-        [JsonProperty("docenteId")]
-        public long DocenteId { get; set; }
-
         [JsonProperty("usuarioId")]
         public long UsuarioId { get; set; }
+
     }
 }

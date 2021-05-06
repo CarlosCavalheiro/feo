@@ -1,4 +1,5 @@
 ﻿using MySqlConnector;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -9,14 +10,31 @@ namespace WebFEO_API.Models
 {
     public class Apontamento
     {
+        [JsonProperty("id")]
         public long Id { get; set; }
+
+        [JsonProperty("data")]
         public DateTime Data { get; set; }
+
+        [JsonProperty("dataApontamento")]
         public DateTime DataApontamento { get; set; }
+
+        [JsonProperty("hora")]
         public string Hora { get; set; }
+
+        [JsonProperty("observacao")]
         public string Observacao { get; set; }
+
+        [JsonProperty("posicaoGPS")]
         public string PosicaoGPS { get; set; }
+
+        [JsonProperty("dispositivo")]
         public string Dispositivo { get; set; }
+
+        [JsonProperty("usuarioId")]
         public long UsuarioId { get; set; }
+
+        [JsonProperty("tipoApontamentoId")]
         public long TipoApontamentoId { get; set; }
 
 

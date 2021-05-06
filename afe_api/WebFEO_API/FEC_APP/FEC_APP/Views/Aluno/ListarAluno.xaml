@@ -2,44 +2,31 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:vm="clr-namespace:FEC_APP.ViewModels"
              x:Class="FEC_APP.Views.Aluno.ListarAluno"
-             Title="Listar Alunos"
+             Title="Alunos Cadastrados"
+             Background="{DynamicResource BackgroundColorApp}"
+             Shell.NavBarHasShadow="False"
              >
     <ContentPage.BindingContext>
         <vm:ListarAlunoViewModel/>
     </ContentPage.BindingContext>
     <ContentPage.Content>
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*" />
-            </Grid.RowDefinitions>
+        <Grid RowDefinitions="*">
+            <Frame Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand" HeightRequest="300" IsEnabled="False">
+                <Frame.Background>
+                    <LinearGradientBrush EndPoint="0,1">
+                        <GradientStop Color="{StaticResource Primary}" Offset="0.1"/>
+                        <GradientStop Color="Transparent" Offset="1.0" />
+                    </LinearGradientBrush>
+                </Frame.Background>
+            </Frame>
             <StackLayout Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
                 <StackLayout Margin="10" >
-                    <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition />
-                        </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="5"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-                        <BoxView Grid.Row="0" Grid.Column="0" BackgroundColor="#d7703c" WidthRequest="5" HeightRequest="30" CornerRadius="5"/>
-                        <Label Text="Bombas Cadastradas"
-                                   Grid.Row="0" Grid.Column="1"
-                                   FontSize="18"
-                                   FontFamily="{DynamicResource RubikBold}"
-                                   TextColor="{DynamicResource TextPrimaryColor}"
-                                   VerticalTextAlignment="Center"                       
-                                   />
-                    </Grid>
-                </StackLayout>
-
-                <StackLayout Margin="10">
                     <ScrollView>
-                        <ListView x:Name="lvBombas"  
+                        <ListView x:Name="lvAlunos"  
                                       SeparatorColor="Transparent"
                                       ItemSelected="OnItemSelected"
                                       ItemsSource="{Binding ListarAlunos}"
-                                      HasUnevenRows="True">
+                                      HasUnevenRows="True" RowHeight="30">
                             <ListView.ItemTemplate>
                                 <DataTemplate>
                                     <ViewCell>
@@ -50,27 +37,32 @@
                                                    Margin="5">
 
                                             <StackLayout Orientation="Horizontal">
-                                                <!--<Frame Margin="10"                                                           
+                                                <Frame Margin="10"       
+                                                       Padding="0"
                                                            BackgroundColor="{DynamicResource BackgroundColorApp}"
                                                            CornerRadius="50"
-                                                           HeightRequest="60"                                                       
+                                                           HeightRequest="50"                                                       
+                                                           WidthRequest="50"
                                                            IsClippedToBounds="True"
                                                            HorizontalOptions="Center"
                                                            VerticalOptions="Center">
-                                                    <Image Source="{Binding Imagem}"
+                                                    <!--<Image Source="{Binding Imagem}"
                                                                   Aspect="AspectFit"
                                                                   Margin="-5"
                                                                   HeightRequest="70"
-                                                                  WidthRequest="70"/>
-                                                </Frame>-->
+                                                                  WidthRequest="70"/>-->
+                                                    <Label FontFamily="{DynamicResource FonteIcon}" 
+                                                            TextColor="{DynamicResource TextPrimaryColor}" 
+                                                            Text="&#xe818;" 
+                                                            FontSize="40" 
+                                                           VerticalOptions="Center"
+                                                           HorizontalOptions="Center"/>
+                                                </Frame>
 
                                                 <StackLayout HorizontalOptions="StartAndExpand" 
                                                                  VerticalOptions="Center">
-                                                    <Label Text="{Binding Id, StringFormat='#{0}'}"
-                                                               HorizontalTextAlignment="Start"
-                                                               Style="{DynamicResource TxtNormal}" 
-                                                               FontSize="14" />
-                                                    <Label Text="{Binding Nome}" 
+                                                   
+                                                    <Label Text="{Binding NomeCompleto}" 
                                                                HorizontalTextAlignment="Start"
                                                                Style="{DynamicResource TxtNormal}" 
                                                                FontSize="15"/>
@@ -80,15 +72,14 @@
                                                                FontSize="10"/>
                                                 </StackLayout>
 
-                                                <Button BackgroundColor="{DynamicResource BackgroundColor}"  
+                                                <Button BackgroundColor="{DynamicResource BackgroundColorApp}"  
                                                             FontFamily="{DynamicResource FonteIcon}" 
-                                                            TextColor="{DynamicResource TextSecondaryColor}" 
+                                                            TextColor="{DynamicResource TextPrimaryColor}" 
                                                             Text="&#xe820;" 
                                                             FontSize="20" 
                                                             WidthRequest="50"
                                                             CommandParameter="{Binding Id}"
                                                         />
-                                                <!--Clicked="ClickEditarBomba"-->
 
                                             </StackLayout>
                                         </Frame>
@@ -108,7 +99,7 @@
                         BorderColor="{DynamicResource BackgroundColor}" 
                         BorderWidth="4"
                         FontAttributes="Bold" 
-                        BackgroundColor="{DynamicResource BtnBackgroundColor}" 
+                        BackgroundColor="{DynamicResource Background4}" 
                         BorderRadius="50"
                         TextColor="White" 
                         HorizontalOptions="End" 

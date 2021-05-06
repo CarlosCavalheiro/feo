@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PropertyChanged;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,11 +11,17 @@ using Xamarin.Forms.Xaml;
 namespace FEC_APP.Views.Docente
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
+    [AddINotifyPropertyChangedInterface]
+
     public partial class ListarDocente : ContentPage
     {
         public ListarDocente()
         {
             InitializeComponent();
+        }
+        private void OnItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+
         }
     }
 }
