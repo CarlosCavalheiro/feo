@@ -16,6 +16,21 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Views\Docente\NovoDocente.xaml.cs">
+      <DependentUpon>NovoDocente.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Popup\PopupAguardePage.xaml.cs">
+      <DependentUpon>PopupAguardePage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Views\Docente\NovoDocente.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Popup\PopupAguardePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\Popup\PopupAguarde.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>

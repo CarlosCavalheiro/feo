@@ -1,6 +1,8 @@
 ﻿using FEC_APP.Models;
 using FEC_APP.Services;
+using FEC_APP.Views.Popup;
 using PropertyChanged;
+using Rg.Plugins.Popup.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -20,8 +22,24 @@ namespace FEC_APP.ViewModels
 
         public async void CargaInicial()
         {
-            ResponsavelService service = new ResponsavelService();
-            ListarResponsavel = await service.Listar();
+            try
+            {
+                PopupAguarde aguarde = new PopupAguarde();
+                await NavigationExtension.PushPopupAsync(null, aguarde);
+
+                ResponsavelService service = new ResponsavelService();
+                ListarResponsavel = await service.Listar();
+
+                await NavigationExtension.RemovePopupPageAsync(null, aguarde);
+
+            }
+            catch (Exception)
+            {
+
+                Toast.Show("Falha ao carregar lista de responsáveis", Toast.ToastType.Error);
+
+            }
+           
         }
 
     }

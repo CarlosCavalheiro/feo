@@ -62,7 +62,7 @@
         <Setter Property="Visual" Value="Material"/>
         <Setter Property="FontSize" Value="18" />
         <Setter Property="FontAttributes" Value="Bold" />
-        <Setter Property="CornerRadius" Value="30" />
+        <Setter Property="CornerRadius" Value="10" />
         <Setter Property="FontFamily" Value="{StaticResource Rubik}" />
         <Setter Property="TextColor" Value="{DynamicResource BtnTextColor}" />
         <Setter Property="BackgroundColor" Value="{DynamicResource BtnBackgroundColor}" />
@@ -70,33 +70,11 @@
         <Setter Property="Padding" Value="0" />
         <Setter Property="HeightRequest" Value="60" />
     </Style>
-    <Style x:Key="BtnDestaqueOferta" TargetType="Button">
-        <Setter Property="Visual" Value="Material"/>
-        <Setter Property="FontSize" Value="12" />
-        <Setter Property="FontAttributes" Value="Bold" />
-        <Setter Property="FontFamily" Value="{StaticResource Rubik}" />
-        <Setter Property="TextColor" Value="{DynamicResource BtnTextColor}" />
-        <Setter Property="BackgroundColor" Value="{DynamicResource BtnBackgroundColor}" />
-        <Setter Property="Margin" Value="0" />
-        <Setter Property="Padding" Value="0" />
-        <Setter Property="HeightRequest" Value="30" />
-    </Style>
-    <Style x:Key="BtnDetalhePedido" TargetType="Button">
-        <Setter Property="Visual" Value="Material"/>
-        <Setter Property="FontSize" Value="12" />
-        <Setter Property="FontAttributes" Value="Bold" />
-        <Setter Property="FontFamily" Value="{StaticResource Rubik}" />
-        <Setter Property="TextColor" Value="{DynamicResource BtnTextColor}" />
-        <Setter Property="BackgroundColor" Value="{DynamicResource Btn4BackgroundColor}" />
-        <Setter Property="Margin" Value="0" />
-        <Setter Property="Padding" Value="0" />
-        <Setter Property="HeightRequest" Value="30" />
-    </Style>
     <Style x:Key="BtnAccess" TargetType="Button">
         <Setter Property="Visual" Value="Material"/>
         <Setter Property="FontSize" Value="18" />
         <Setter Property="FontAttributes" Value="Bold" />
-        <Setter Property="CornerRadius" Value="30" />
+        <Setter Property="CornerRadius" Value="10" />
         <Setter Property="FontFamily" Value="{StaticResource Rubik}" />
         <Setter Property="TextColor" Value="{DynamicResource BtnTextColor}" />
         <Setter Property="BackgroundColor" Value="{DynamicResource BtnBackgroundColor}" />
@@ -104,23 +82,36 @@
         <Setter Property="Padding" Value="0" />
         <Setter Property="HeightRequest" Value="50" />
     </Style>
-    <Style x:Key="BtnNormal2" TargetType="Button">
+    <Style x:Key="BtnExcluir" TargetType="Button">
         <Setter Property="Visual" Value="Material"/>
         <Setter Property="FontSize" Value="18" />
         <Setter Property="FontAttributes" Value="Bold" />
-        <Setter Property="CornerRadius" Value="30" />
+        <Setter Property="CornerRadius" Value="10" />
         <Setter Property="FontFamily" Value="{StaticResource Rubik}" />
-        <Setter Property="TextColor" Value="{DynamicResource TextPrimaryColor}" />
+        <Setter Property="TextColor" Value="{DynamicResource BtnTextColor}" />
         <Setter Property="BackgroundColor" Value="{DynamicResource Btn3BackgroundColor}" />
         <Setter Property="Margin" Value="40, 5, 40, 5" />
         <Setter Property="Padding" Value="0" />
         <Setter Property="HeightRequest" Value="50" />
     </Style>
+    <Style x:Key="BtnGravar" TargetType="Button">
+        <Setter Property="Visual" Value="Material"/>
+        <Setter Property="FontSize" Value="18" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="CornerRadius" Value="10" />
+        <Setter Property="FontFamily" Value="{StaticResource Rubik}" />
+        <Setter Property="TextColor" Value="{DynamicResource BtnTextColor}" />
+        <Setter Property="BackgroundColor" Value="{DynamicResource Btn4BackgroundColor}" />
+        <Setter Property="Margin" Value="40, 5, 40, 5" />
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="HeightRequest" Value="50" />
+    </Style>
+    
     <Style x:Key="BtnRememberPassword" TargetType="Button">
         <Setter Property="Visual" Value="Material"/>
         <Setter Property="FontSize" Value="14" />
         <Setter Property="FontAttributes" Value="Bold" />
-        <Setter Property="CornerRadius" Value="30" />
+        <Setter Property="CornerRadius" Value="10" />
         <Setter Property="FontFamily" Value="{StaticResource Rubik}" />
         <Setter Property="TextColor" Value="{DynamicResource TextPrimaryColor}" />
         <Setter Property="BackgroundColor" Value="Transparent" />
@@ -132,7 +123,7 @@
         <Setter Property="Visual" Value="Material"/>
         <Setter Property="FontSize" Value="18" />
         <Setter Property="FontAttributes" Value="Bold" />
-        <Setter Property="CornerRadius" Value="30" />
+        <Setter Property="CornerRadius" Value="10" />
         <Setter Property="FontFamily" Value="{StaticResource Rubik}" />
         <Setter Property="TextColor" Value="{DynamicResource BtnTextColor}" />
         <Setter Property="BackgroundColor" Value="{DynamicResource Btn2BackgroundColor}" />
@@ -141,5 +132,24 @@
         <Setter Property="HeightRequest" Value="50" />
     </Style>
 
+    <Color x:Key="LightGreenColor">#2FA999</Color>
+    <Color x:Key="BorderColor">#D8D8D8</Color>
 
+    <Style x:Key="LableStyle" TargetType="Label">
+        <Setter Property="FontFamily" Value="{StaticResource RubikMedium}" />
+        <Setter Property="TextColor" Value="#666666" />
+        <Setter Property="FontSize" Value="Small" />
+    </Style>
+    <Style x:Key="FrameStyle" TargetType="Frame">
+        <Setter Property="HasShadow" Value="False" />
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="CornerRadius" Value="5" />
+        <Setter Property="BorderColor" Value="{StaticResource BorderColor}" />
+    </Style>
+    <Style x:Key="EntryStyle" TargetType="Entry">
+        <Setter Property="FontFamily" Value="{StaticResource Rubik}" />
+        <Setter Property="HeightRequest" Value="40"></Setter>
+        <Setter Property="Margin" Value="5,0,0,0"></Setter>
+    </Style>
+    
 </ResourceDictionary>

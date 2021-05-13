@@ -2,7 +2,6 @@ A:\feo\afe_api\WebFEO_API\FEC_APP\FEC_APP\bin\Debug\netstandard2.0\FEC_APP.deps.
 A:\feo\afe_api\WebFEO_API\FEC_APP\FEC_APP\bin\Debug\netstandard2.0\FEC_APP.dll
 A:\feo\afe_api\WebFEO_API\FEC_APP\FEC_APP\bin\Debug\netstandard2.0\ref\FEC_APP.dll
 A:\feo\afe_api\WebFEO_API\FEC_APP\FEC_APP\bin\Debug\netstandard2.0\FEC_APP.pdb
-A:\feo\afe_api\WebFEO_API\FEC_APP\FEC_APP\obj\Debug\netstandard2.0\FEC_APP.csprojAssemblyReference.cache
 A:\feo\afe_api\WebFEO_API\FEC_APP\FEC_APP\obj\Debug\netstandard2.0\App.xaml.g.cs
 A:\feo\afe_api\WebFEO_API\FEC_APP\FEC_APP\obj\Debug\netstandard2.0\AppShell.xaml.g.cs
 A:\feo\afe_api\WebFEO_API\FEC_APP\FEC_APP\obj\Debug\netstandard2.0\Style\Base.xaml.g.cs
@@ -12,8 +11,10 @@ A:\feo\afe_api\WebFEO_API\FEC_APP\FEC_APP\obj\Debug\netstandard2.0\Views\AboutPa
 A:\feo\afe_api\WebFEO_API\FEC_APP\FEC_APP\obj\Debug\netstandard2.0\Views\Aluno\ListarAluno.xaml.g.cs
 A:\feo\afe_api\WebFEO_API\FEC_APP\FEC_APP\obj\Debug\netstandard2.0\Views\Apontamento\ListarApontamento.xaml.g.cs
 A:\feo\afe_api\WebFEO_API\FEC_APP\FEC_APP\obj\Debug\netstandard2.0\Views\Docente\ListarDocente.xaml.g.cs
+A:\feo\afe_api\WebFEO_API\FEC_APP\FEC_APP\obj\Debug\netstandard2.0\Views\Docente\NovoDocente.xaml.g.cs
 A:\feo\afe_api\WebFEO_API\FEC_APP\FEC_APP\obj\Debug\netstandard2.0\Views\LoginPage.xaml.g.cs
 A:\feo\afe_api\WebFEO_API\FEC_APP\FEC_APP\obj\Debug\netstandard2.0\Views\Popup\PopupAguarde.xaml.g.cs
+A:\feo\afe_api\WebFEO_API\FEC_APP\FEC_APP\obj\Debug\netstandard2.0\Views\Popup\PopupAguardePage.xaml.g.cs
 A:\feo\afe_api\WebFEO_API\FEC_APP\FEC_APP\obj\Debug\netstandard2.0\Views\Popup\PopupAlerta.xaml.g.cs
 A:\feo\afe_api\WebFEO_API\FEC_APP\FEC_APP\obj\Debug\netstandard2.0\Views\Popup\PopupMensagem.xaml.g.cs
 A:\feo\afe_api\WebFEO_API\FEC_APP\FEC_APP\obj\Debug\netstandard2.0\Views\Principal.xaml.g.cs
@@ -26,3 +27,4 @@ A:\feo\afe_api\WebFEO_API\FEC_APP\FEC_APP\obj\Debug\netstandard2.0\XamlC.stamp
 A:\feo\afe_api\WebFEO_API\FEC_APP\FEC_APP\obj\Debug\netstandard2.0\FEC_APP.dll
 A:\feo\afe_api\WebFEO_API\FEC_APP\FEC_APP\obj\Debug\netstandard2.0\ref\FEC_APP.dll
 A:\feo\afe_api\WebFEO_API\FEC_APP\FEC_APP\obj\Debug\netstandard2.0\FEC_APP.pdb
+A:\feo\afe_api\WebFEO_API\FEC_APP\FEC_APP\obj\Debug\netstandard2.0\FEC_APP.csprojAssemblyReference.cache

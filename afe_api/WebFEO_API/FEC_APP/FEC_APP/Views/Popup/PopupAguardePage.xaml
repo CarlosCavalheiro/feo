@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<popup:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:popup="http://rotorgames.com"
+              CloseWhenBackgroundIsClicked="False"
+              x:Class="FEC_APP.Views.Popup.PopupAguardePage">
+    <ActivityIndicator
+    Color="White"
+    IsRunning="True"
+    IsEnabled="True"
+    VerticalOptions="Center"
+    HorizontalOptions="Center"
+    HeightRequest="70"
+    WidthRequest="70"/>
+</popup:PopupPage>

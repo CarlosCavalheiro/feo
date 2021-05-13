@@ -58,5 +58,68 @@ namespace FEC_APP.Services
                 throw new Exception("Não foi possível obter a chave de validação");
         }
 
+        public async Task<Docente> Criar(Docente docente)
+        {
+            if (await UsuarioValido())
+            {
+                string json = JsonConvert.SerializeObject(docente);
+
+                HttpResponseMessage responseMessage = await ConsumirAPIAsync(string.Format(URL, ""),
+                                                                                                PostType.POST,
+                                                                                                json.ToString(),
+                                                                                                usuario.TokenRegistrado);
+
+                if (responseMessage.IsSuccessStatusCode)
+                {
+                    string retorno = await responseMessage.Content.ReadAsStringAsync();
+
+                    docente = JsonConvert.DeserializeObject<Docente>(retorno);
+
+                    return docente;
+                }
+                else
+                {
+                    string retorno = await responseMessage.Content.ReadAsStringAsync();
+                    JObject jRetorno = JObject.Parse(retorno.ToString());
+                    throw new Exception(jRetorno["message"].ToString());
+                }
+            }
+            else
+                throw new Exception("Não foi possível obter a chave de validação");
+
+        }
+
+        public async Task<Docente> Alterar(Docente docente)
+        {
+
+            if (await UsuarioValido())
+            {
+                string json = JsonConvert.SerializeObject(docente);
+
+                HttpResponseMessage responseMessage = await ConsumirAPIAsync(string.Format(URL, docente.Id.ToString()),
+                                                                                                PostType.PUT,
+                                                                                                json.ToString(),
+                                                                                                usuario.TokenRegistrado);
+
+                if (responseMessage.IsSuccessStatusCode)
+                {
+                    string retorno = await responseMessage.Content.ReadAsStringAsync();
+
+                    docente = JsonConvert.DeserializeObject<Docente>(retorno);
+
+                    return docente;
+                }
+                else
+                {
+                    string retorno = await responseMessage.Content.ReadAsStringAsync();
+                    JObject jRetorno = JObject.Parse(retorno.ToString());
+                    throw new Exception(jRetorno["message"].ToString());
+                }
+            }
+            else
+                throw new Exception("Não foi possível obter a chave de validação");
+        }
+
+
     }
 }

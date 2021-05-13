@@ -1,6 +1,9 @@
 SplashActivity, FEC_APP.Android;crc642bb743b73ef6c1a5.SplashActivity
 SplashActivity;crc642bb743b73ef6c1a5.SplashActivity
 SplashActivity;crc642bb743b73ef6c1a5.SplashActivity
+FEC_APP.Droid.CustomEntryRenderer, FEC_APP.Android;crc64cc410a0d618d0339.CustomEntryRenderer
+FEC_APP.Droid.CustomEntryRenderer;crc64cc410a0d618d0339.CustomEntryRenderer
+fec_app.droid.CustomEntryRenderer;crc64cc410a0d618d0339.CustomEntryRenderer
 FEC_APP.Droid.MainActivity, FEC_APP.Android;crc64cc410a0d618d0339.MainActivity
 FEC_APP.Droid.MainActivity;crc64cc410a0d618d0339.MainActivity
 fec_app.droid.MainActivity;crc64cc410a0d618d0339.MainActivity

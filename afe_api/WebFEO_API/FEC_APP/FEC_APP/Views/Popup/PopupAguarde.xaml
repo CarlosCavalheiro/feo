@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <popup:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
               xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-              xmlns:popup="http://rotorgames.com"
-              CloseWhenBackgroundIsClicked="False"
+              xmlns:popup="http://rotorgames.com" xmlns:fec_app="clr-namespace:FEC_APP" x:DataType="fec_app:AppShell"
+                 CloseWhenBackgroundIsClicked="False"
               x:Class="FEC_APP.Views.Popup.PopupAguarde">
     <ActivityIndicator
     Color="White"

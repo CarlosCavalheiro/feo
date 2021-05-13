@@ -1,9 +1,14 @@
 ﻿using FEC_APP.Models;
 using FEC_APP.Services;
+using FEC_APP.Views.Docente;
+using FEC_APP.Views.Popup;
 using PropertyChanged;
+using Rg.Plugins.Popup.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Windows.Input;
+using Xamarin.Forms;
 
 namespace FEC_APP.ViewModels
 {
@@ -20,9 +25,69 @@ namespace FEC_APP.ViewModels
 
         public async void CargaInicial()
         {
-            DocenteService service = new DocenteService();
-            ListarDocente = await service.Listar();
+            try
+            {
+                PopupAguarde aguarde = new PopupAguarde();
+                await NavigationExtension.PushPopupAsync(null, aguarde);
+
+                DocenteService service = new DocenteService();
+                ListarDocente = await service.Listar();
+
+                await NavigationExtension.RemovePopupPageAsync(null, aguarde);
+            }
+            catch (Exception)
+            {
+
+                Toast.Show("Falha ao carregar lista de docentes", Toast.ToastType.Error);
+
+            }
+
+
         }
+
+        public async void DocenteSelecionado(long id)
+        {
+            try
+            {
+                Docente _docente = this.ListarDocente.Find(x => x.Id == id);
+                NovoDocente pagina = new NovoDocente(_docente);
+                await Application.Current.MainPage.Navigation.PushModalAsync(pagina, true);
+            }
+            catch (Exception ex)
+            {
+
+                Toast.Show($"Falha ao localizar Docente. {ex.Message}");
+            }
+        }
+
+        
+        private bool _atualizando = false;
+        public bool Atualizando
+        {
+            get { return _atualizando; }
+            set => SetProperty(ref _atualizando, value);
+        }
+
+        private void SetProperty(ref bool atualizando, bool value)
+        {
+            throw new NotImplementedException();
+        }
+
+        public ICommand AtualizarCommand
+        {
+            get
+            {
+                return new Command(() =>
+                {
+                    Atualizando = true;
+
+                    CargaInicial();
+
+                    Atualizando = false;
+                });
+            }
+        }
+
 
     }
 }
