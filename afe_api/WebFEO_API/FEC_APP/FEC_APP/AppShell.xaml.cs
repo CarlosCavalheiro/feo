@@ -34,5 +34,11 @@ namespace FEC_APP
             await Application.Current.MainPage.Navigation.PopToRootAsync();
 
         }
+
+        protected override bool OnBackButtonPressed()
+        {
+            base.OnBackButtonPressed();
+            return false;
+        }
     }
 }

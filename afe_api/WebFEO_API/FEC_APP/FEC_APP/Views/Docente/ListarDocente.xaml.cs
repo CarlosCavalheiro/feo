@@ -16,6 +16,7 @@ namespace FEC_APP.Views.Docente
 
     public partial class ListarDocente : ContentPage
     {
+
         public ListarDocente()
         {
             InitializeComponent();
@@ -37,5 +38,6 @@ namespace FEC_APP.Views.Docente
             ((ListarDocenteViewModel)this.BindingContext).DocenteSelecionado(Convert.ToInt64(((Button)sender).CommandParameter));
 
         }
+
     }
 }

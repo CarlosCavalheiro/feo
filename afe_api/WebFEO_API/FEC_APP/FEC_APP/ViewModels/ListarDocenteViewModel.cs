@@ -60,34 +60,6 @@ namespace FEC_APP.ViewModels
             }
         }
 
-        
-        private bool _atualizando = false;
-        public bool Atualizando
-        {
-            get { return _atualizando; }
-            set => SetProperty(ref _atualizando, value);
-        }
-
-        private void SetProperty(ref bool atualizando, bool value)
-        {
-            throw new NotImplementedException();
-        }
-
-        public ICommand AtualizarCommand
-        {
-            get
-            {
-                return new Command(() =>
-                {
-                    Atualizando = true;
-
-                    CargaInicial();
-
-                    Atualizando = false;
-                });
-            }
-        }
-
 
     }
 }

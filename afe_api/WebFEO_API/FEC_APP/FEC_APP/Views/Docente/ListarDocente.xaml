@@ -23,13 +23,13 @@
                 <StackLayout Margin="10" >
 
                         <ScrollView>
-                        <ListView x:Name="lvAlunos"  
+                        <ListView x:Name="lvDocentes"  
                                       SeparatorColor="Transparent"
                                       ItemSelected="OnItemSelected"
                                       ItemsSource="{Binding ListarDocente}"
                                       IsPullToRefreshEnabled="True"
                                       RefreshCommand="{Binding AtualizarCommand}"
-                                      IsRefreshing="{Binding Atualizando}"
+                                      IsRefreshing="{Binding IsRefreshing}"
                                       HasUnevenRows="True" RowHeight="30">
                             <ListView.ItemTemplate>
                                 <DataTemplate>

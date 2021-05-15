@@ -84,9 +84,9 @@ namespace FEC_APP.ViewModels
 
                     DocenteService serviceDocente = new DocenteService();
                     if (this._docente.Id > 0)
-                        await serviceDocente.Criar(this._docente);
-                    else
                         await serviceDocente.Alterar(this._docente);
+                    else
+                        await serviceDocente.Criar(this._docente);
                 }
             }
             catch (Exception)
@@ -97,6 +97,7 @@ namespace FEC_APP.ViewModels
             finally
             {
                 Popup.FecharLoading();
+                
             }
         }
 
