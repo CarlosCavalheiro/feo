@@ -74,13 +74,13 @@
                                 />-->
 
 
-                            <Image Source="logo_senai.jpg" HeightRequest="30"/>
+                            <!--<Image Source="logo_senai.jpg" HeightRequest="30"/>
                             <Label Text="Escola SENAI de Lençóis Paulista - SP"                            
                                     Style="{DynamicResource TxtNormal}"
                                     FontSize="15"
                                     HorizontalTextAlignment="Center"
                                     TextColor="{StaticResource TextPrimaryColor}"
-                                    Margin="0, 5, 0, 0" Padding="0"/>
+                                    Margin="0, 5, 0, 0" Padding="0"/>-->
                         </StackLayout>
 
                     </Frame>

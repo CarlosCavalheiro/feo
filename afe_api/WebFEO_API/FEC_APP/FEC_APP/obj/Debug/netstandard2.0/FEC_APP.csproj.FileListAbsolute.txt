@@ -28,3 +28,4 @@ A:\feo\afe_api\WebFEO_API\FEC_APP\FEC_APP\obj\Debug\netstandard2.0\FEC_APP.dll
 A:\feo\afe_api\WebFEO_API\FEC_APP\FEC_APP\obj\Debug\netstandard2.0\ref\FEC_APP.dll
 A:\feo\afe_api\WebFEO_API\FEC_APP\FEC_APP\obj\Debug\netstandard2.0\FEC_APP.pdb
 A:\feo\afe_api\WebFEO_API\FEC_APP\FEC_APP\obj\Debug\netstandard2.0\FEC_APP.csprojAssemblyReference.cache
+A:\feo\afe_api\WebFEO_API\FEC_APP\FEC_APP\obj\Debug\netstandard2.0\FEC_APP.GeneratedMSBuildEditorConfig.editorconfig
